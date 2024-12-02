@@ -1,0 +1,14 @@
+.narrative {
+  max-width: 40rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.no-overflow {
+  white-space: nowrap; /* Prevents line wrapping */
+  overflow: hidden; /* Hides overflowing content */
+  text-overflow: ellipsis; /* Adds ellipsis for overflow */
+  max-width: 50vw; /* Take up half the width of the screen, by default */
+}

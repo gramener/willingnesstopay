@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Willingness to Pay</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/gramener/assets/main/straive-favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=".">Willingness to Pay</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="nav-item dropdown ms-auto" role="group" aria-label="Toggle dark mode" title="Toggle Dark Mode">
+          <button class="dark-theme-toggle btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (auto)">
+            <i class="bi bi-circle-half"></i> <span class="d-lg-none ms-2">Toggle theme</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><button class="dropdown-item" data-bs-theme-value="light"><i class="me-2 bi bi-sun-fill"></i> Light</button></li>
+            <li><button class="dropdown-item" data-bs-theme-value="dark"><i class="me-2 bi bi-moon-stars-fill"></i> Dark</button></li>
+            <li><button class="dropdown-item" data-bs-theme-value="auto"><i class="me-2 bi bi-circle-half"></i> Auto</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <h1 class="display-1 my-4 text-center">Willingness to Pay</h1>
+    <h2 class="display-6 text-center">Identify customer willingness to pay from call transcripts?</h2>
+    <div class="mx-auto my-3 narrative">
+      <p>In debt collection calls, <strong>identifying payment intent</strong> is crucial. Collection agents need to assess if debtors are:</p>
+      <ul>
+        <li>The right point of contact</li>
+        <li>Acknowledging the debt</li>
+        <li>Willing to pay</li>
+        <li>Making specific payment promises</li>
+        <li>Requesting payment assistance</li>
+        <li>At risk of default</li>
+      </ul>
+
+      <p>Willingness to Pay streamlines this assessment. We analyze call transcripts to <strong>identify key payment indicators</strong> and supporting evidence.</p>
+
+      <p>This helps collection agencies, credit card managers, and financial institutions improve recovery rates and prioritize follow-ups.</p>
+
+      <p>Willingness to Pay uses:</p>
+      <ul>
+        <li><strong>Private LLMs</strong>. Transcripts stay in the Straive tenant with no model training on your data.</li>
+        <li><strong>JSON schema validation</strong> to ensure consistent, structured analysis.</li>
+        <li><strong>Ground-truthing</strong> by extracting verbatim conversation snippets as evidence.</li>
+      </ul>
+
+      <p>The interactive dashboard lets you analyze multiple transcripts, with detailed reasoning for each assessment and keyboard navigation to review results efficiently.</p>
+    </div>
+
+    <details>
+      <summary class="mx-auto d-block col-md-3 btn btn-outline-primary my-3">Analyze your own</summary>
+      <form id="transcript-form" class="my-3">
+        <div class="row">
+          <div class="col-md">
+            <label class="form-label fw-bold me-2" for="system-prompt">System prompt</label>
+            <textarea class="form-control" rows="10" id="system-prompt" name="system-prompt" placeholder="Enter system prompt.">In this debt collection conversation between the a debt collection agent and debtors, identify the agent and debtor clearly. Then, answer the below questions and explain your rationale:
+
+          $QUESTIONS
+
+          Return an array of objects with keys: 1-question, 2-reasoning, 3-answer, 4-transcript - verbatim, to support the reasoning.</textarea>
+          </div>
+          <div class="col-md">
+            <label class="form-label fw-bold me-2" for="transcript">Transcripts <span class="text-muted small fw-normal">(separated by a row of <code>==========</code>)</span></label>
+            <textarea class="form-control" rows="10" id="transcript" name="transcript" placeholder="Enter text of the transcript." required minlength="100"></textarea>
+          </div>
+          <div class="col-md">
+            <label class="form-label fw-bold me-2" for="terms">Terms to check <span class="text-muted small fw-normal">(one per line)</span></label>
+            <textarea class="form-control font-monospace" rows="10" id="terms" name="terms" placeholder="Enter transcript terms to check, one per line">
+          1. Did the agent reach the right point-of-contact?
+          2. Did the agent get the correct contact information of the debtor?
+          3. Did the debtor accept that the invoice was due?
+          4. Was the debtor willing to pay?
+          5. Was there a promise to pay by the debtor?
+          6. Did the debtor make any specific requirement to help them pay?
+          7. Is the risk of the payment default high?
+                    </textarea>
+          </div>
+        </div>
+        <div id="analyze" class="text-center my-5"></div>
+      </form>
+    </details>
+
+
+    <div id="results" class="table-responsive"></div>
+  </div>
+
+  <footer class="my-5 vh-100 d-flex align-items-center justify-content-center">
+    <h1 class="display-4">Designed by <a href="https://gramener.com/" class="text-reset link-offset-3 link-underline link-underline-opacity-25">Gramener</a></h1>
+  </footer>
+
+  <div class="modal" tabindex="-1" id="snippet-modal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content" id="snippet-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="snippet-modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="snippet-modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@gramex/ui@0.3/dist/dark-theme.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
