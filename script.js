@@ -64,6 +64,13 @@ $transcriptForm.addEventListener("submit", async (event) => {
   renderResults(results);
 });
 
+function initializeTooltips() {
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+}
+
 function renderResults(results) {
   render(
     html`
@@ -76,12 +83,12 @@ function renderResults(results) {
         </thead>
         <tbody>
           ${results.map(
-            ({ invoice_no, answers, error }, index) => html`
+            (row, index) => html`
               <tr data-index="${index}">
-                <td class="no-overflow">${invoice_no}</td>
-                ${error
-                  ? html`<td class="text-danger" colspan="${terms.length}">${error}</td>`
-                  : answers.map((answer) => html`<td>${answer.answer ? "✅" : "❌"}</td>`)}
+                <td class="no-overflow" data-bs-toggle="tooltip" title="${row.transcript}">${row.invoice_no}</td>
+                ${row.error
+                  ? html`<td class="text-danger" colspan="${terms.length}">${row.error}</td>`
+                  : row.answers.map((answer) => html`<td>${answer.answer ? "✅" : "❌"}</td>`)}
               </tr>
             `
           )}
@@ -90,6 +97,9 @@ function renderResults(results) {
     `,
     $results
   );
+
+  // Initialize Bootstrap tooltips
+  initializeTooltips();
 }
 
 let currentIndex = -1;
@@ -132,6 +142,10 @@ function showAnswersModal(index) {
           )}
         </tbody>
       </table>
+      <div>
+        <h4>Full Transcript</h4>
+        <p>${transcript}</p>
+      </div>
     `,
     document.querySelector("#snippet-modal-body")
   );
@@ -139,10 +153,7 @@ function showAnswersModal(index) {
   modal.show();
 
   // Initialize Bootstrap tooltips
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
+  initializeTooltips();
 }
 
 $results.addEventListener("click", (event) => {
