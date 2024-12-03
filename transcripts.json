@@ -1,18 +1,19 @@
 [
   {
+    "invoice_no" : "HONEN9L53U",
     "transcript": "Agent:  Representative from Company A\n\nDebtor:  Individual B\n\n\nConversation:\n\nAgent: Hello.\n\nDebtor: Hello.\n\nAgent: Good morning. This is [Agent Name] from Company A.\n\nDebtor: Oh, [University Name].\n\nAgent: Um, hello?\n\nDebtor: Uh, yeah. I just want to confirm have I reached [Professor Name]'s office?\n\nAgent: Sorry?\n\nDebtor: Yeah. Um, can you please transfer me to your accounts payable?\n\nAgent: Or accounting?\n\nDebtor: Accounting. For invoicing?\n\nAgent: Yeah, for invoice.\n\nDebtor: [Confirmation]\n\nAgent: [Confirmation]\n\nDebtor: For invoicing, right?\n\nAgent: Right?\n\nDebtor: For invoicing, right?\n\nDebtor: No, actually hold on for a moment. What invoice?\n\nAgent: Um, this is for a research, like an open access research for authors, you know?\n\nDebtor: Yeah, this is for Company A.\n\nAgent: [Confirmation]\n\nDebtor: Many labs, many researches in here.\n\nAgent: Yeah. Do you find us the specific one?\n\nDebtor: Yes, actually I have an invoice number.\n\nAgent: Um, the first one?\n\nDebtor: We can find the number, find the number.\n\nAgent: Oh, you cannot find by the number?\n\nAgent: We need the lab name or the colleague name.\n\nDebtor: Um, okay. So, um, I believe the first one. I can just give you the author's name if you can search. Is that okay?\n\nDebtor: Yes? Yes, it's under [Author Name].\n\nAgent: Could you tell me the same as spell?\n\nDebtor: Yeah, [Author Name]. [Author Name spelling].\n\nAgent: That is correct.\n\nDebtor: Okay.\n\nAgent: And um, the other person is, this is actually for two invoices. And the second...\n\nDebtor: Oh, to the second place, we have a person, oh, is it Professor [Professor Name], right?\n\nAgent: Yes, that is correct.\n\nDebtor: Okay, hold on. Are we transferring your call to his? The major office?\n\nAgent: Um, okay. It's going to have the number or email address.\n\nDebtor: Um, sorry. Okay, go ahead.\n\nDebtor: Thank you. We're wrapping up.\n\nAgent: Hello. This is [Agent Name] from Company A.\n\nDebtor: Good morning.\n\nAgent: Oh, yeah. This is [Agent Name] from Company A. Um, I just want to ask if I have reached [Professor Name]'s office?\n\nDebtor: Uh, Professor [Professor Name]?\n\nAgent: Yes, that is correct.\n\nDebtor: [Confirmation]\n\nAgent: Oh, yeah. We are calling for, um, an open invoice, uh, for his research. And we have sent him an email, so, um, can you please confirm if we have the right email here on our end? Can you please confirm his email address?\n\nAgent: [Email Address].\n\nDebtor: Okay, sure. If not, uh, just the phone number is okay.\n\nAgent: [Phone Number]\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nAgent:  [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: [Email Address].\n\nDebtor: [Email Address].\n\nAgent: Okay, so we have the same email address here. Okay, so thank you so much. And can I also have the phone number so we can save it in here on our system?\n\nDebtor: Oh, I don't know the number.\n\nAgent: Oh, you don't know the number?\n\nDebtor: Oh, I am only in... yeah.\n\nAgent: Uh, okay. So, yeah, thank you so much for confirming. So, we have sent him an email, uh, an email in regards with the open invoice. Okay, so please refer to that email.\n\nDebtor: Yes.\n\nAgent: Okay, thank you so much for your time. Bye.\n\nDebtor: Bye.\n\nAgent: Goodbye.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given the lack of acknowledgment of invoice due, unwillingness to pay, and absence of a payment promise, the risk of default appears to be high.",
+        "answer": true,
+        "transcript": "Agent: Okay, so please refer to that email."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The debtor initially thought they reached [Professor Name]'s office but was unsure and asked to confirm. The agent did confirm they were speaking to the right office after more exchanges.",
         "answer": true,
         "transcript": "Agent: Oh, yeah. This is [Agent Name] from Company A. Um, I just want to ask if I have reached [Professor Name]'s office? Debtor: Uh, Professor [Professor Name]? Agent: Yes, that is correct."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent tried to confirm the debtor's email address but ended up repeating it multiple times without verification. The debtor did not provide a phone number.",
-        "answer": false,
-        "transcript": "Agent: Can you please confirm his email address? Debtor: [Email Address]. Agent: [Email Address]."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -37,29 +38,24 @@
         "reasoning": "The debtor did not indicate any specific requirements to facilitate payment; their focus was more on addressing the invoice situation than on payment logistics.",
         "answer": false,
         "transcript": "Debtor: Can you please confirm his email address?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given the lack of acknowledgment of invoice due, unwillingness to pay, and absence of a payment promise, the risk of default appears to be high.",
-        "answer": true,
-        "transcript": "Agent: Okay, so please refer to that email."
       }
     ]
   },
   {
+    "invoice_no" : "QEVBXNO4IB",
     "transcript": "**Agent:**  Debt Collection Agent\n\n**Debtor:**  Individual\n\n**Conversation Transcript:**\n\n**Agent:** You have reached the accounts payable department at [University Name]. Our fax number is [redacted]. For [redacted] or [redacted], press 1. [redacted], press 2. Invoice processing regarding [redacted] press 4 or for receiving press 5.\n\n**Agent:** Hello, hi, good day. This is [redacted] from [redacted]. Um, I would like to ask an email address where we can send the invoices.\n\n**Debtor:** [redacted] from [redacted].\n\n**Agent:** Okay. How many invoices you have?\n\n**Debtor:** Um, I only have one invoice.\n\n**Agent:** Okay, who who placed the order? You usually send it to the person that placed the order?\n\n**Debtor:** [redacted].\n\n**Agent:** I'm sorry.\n\n**Debtor:** Hello?\n\n**Agent:** Do you need... Yes. Do you need the PO of the invoice?\n\n**Debtor:** I don't have a PO.\n\n**Agent:** Do I need the PO of the invoice?\n\n**Debtor:** Mmm.\n\n**Agent:** No. I mean, you have a PO?\n\n**Debtor:** I mean the invoice doesn't have a PO.\n\n**Agent:** Okay. You need... who who sent you the order? I mean, who you thought ordered to? Who was it for? Who does it belong to?\n\n**Debtor:** [redacted].\n\n**Agent:** [redacted]?\n\n**Agent:** Yes. Okay, I have no idea who that is.\n\n**Debtor:** Mmm. They didn't send you no information with their phone number, their email address?\n\n**Debtor:** Um, it has an email address here.\n\n**Agent:** Okay, send it to them. Send it to that email and let them know that you need... what you need.\n\n**Debtor:** Um, can I ask for an email address?\n\n**Agent:** Mine?\n\n**Agent:** [redacted] at [redacted]. You cannot send",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given that the debtor does not acknowledge the invoice or show willingness to pay, the risk of payment default appears high. They seem more confused about the process rather than engaged in resolving the debt.",
+        "answer": true,
+        "transcript": "**Debtor:** I mean the invoice doesn't have a PO."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent is attempting to gather information about a specific invoice and its associated details, which implies that they are at least reaching a representative of the organization that would handle this invoice. However, the conversation lacks clear confirmation that the person on the other end is the correct point-of-contact for the unpaid invoice.",
         "answer": false,
         "transcript": "**Agent:** You have reached the accounts payable department at [University Name]. Our fax number is [redacted]. For [redacted] or [redacted], press 1. [redacted], press 2. Invoice processing regarding [redacted] press 4 or for receiving press 5."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent did not explicitly ask for or receive specific contact information from the debtor aside from the mention of an email address associated with a PO. This indicates a lack of complete contact information confirmation.",
-        "answer": false,
-        "transcript": "**Agent:** Can I ask for an email address?"
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -84,29 +80,24 @@
         "reasoning": "The debtor inquires about the procedure, particularly about the email address needed to proceed, indicating they seek clarification rather than stating requirements to proceed with payment.",
         "answer": true,
         "transcript": "**Debtor:** Um, can I ask for an email address?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given that the debtor does not acknowledge the invoice or show willingness to pay, the risk of payment default appears high. They seem more confused about the process rather than engaged in resolving the debt.",
-        "answer": true,
-        "transcript": "**Debtor:** I mean the invoice doesn't have a PO."
       }
     ]
   },
   {
+    "invoice_no": "QEVBXNO4IB",
     "transcript": "This conversation is between a representative from a company (referred to as \"Company X\") and a representative from Pacific Northwest National Laboratory (PNNL).  The PNNL representative is the recipient of the invoice.\n\n\n**Transcription:**\n\n**PNNL Representative:**  Thank you for calling Pacific Northwest National Laboratory, operated by Battelle for the U.S. Department of Energy. To reach a specific person, just say their name. For benefits, press one. Job inquiries, press two. Accounts payable, press three. Contracts, press four. Please wait while your call is being transferred.\n\n**(Hold music)**\n\n**PNNL Representative:** This is Jennifer.\n\n**Company X Representative:** Hi, this is [Name], calling from Company X.\n\n**PNNL Representative:** Hello.\n\n**Company X Representative:** I'm sorry, could you say that one more time?\n\n**Company X Representative:** Hi, this is [Name], calling from Company X. I just want to confirm. Is this the best email address where we can send the invoices?\n\n**PNNL Representative:** ap at pnnl.gov\n\n**Company X Representative:** Oh, sorry. Sorry, I'm so sorry. Okay, we must have a bad connection. You were You were looking for the best email address to send invoices?\n\n**Company X Representative:** Yes.\n\n**PNNL Representative:** Okay. And what was the invoice that you had? Or, sorry, what was the email address you had?\n\n**Company X Representative:** ap@pnnl.gov\n\n**PNNL Representative:** Yes, that is cor- Yes, that is correct. And one more question. Do you need a purchase order number before we send the invoices?\n\n**PNNL Representative:** Uh, purchase order number?\n\n**Company X Representative:** Mhm.\n\n**PNNL Representative:** Uh, there should be um it should be listed on your invoice.\n\n**Company X Representative:** Mhm.\n\n**PNNL Representative:** Uh, and if it's not listed on your invoice, I would highly suggest finding it and getting it on your invoice or putting it on your email because if we don't have that PO number, it you know, it's very hard to find that information to pay your invoice properly.\n\n**Company X Representative:** Okay. Got it. Thank you so much for the information.\n\n**PNNL Representative:** Alright.\n\n**Company X Representative:** Bye. Thank you. Have a wonderful day.\n\n**PNNL Representative:** Yes, same to you. Have a wonderful day, too. Bye-bye.\n\n**Company X Representative:** Goodbye.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "The risk of default could be considered moderate due to the conditionality of receiving a purchase order number, which seems essential for processing any payments; failure to get this may lead to delays.",
+        "answer": true,
+        "transcript": "PNNL Representative: if we don't have that PO number, it you know, it's very hard to find that information to pay your invoice properly."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The Company X representative was able to speak to a PNNL representative, confirming that they reached the intended contact for invoicing matters.",
         "answer": true,
         "transcript": "PNNL Representative: This is Jennifer."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The Company X representative confirmed the correct email address (ap@pnnl.gov) for sending invoices, indicating they obtained the correct contact information.",
-        "answer": true,
-        "transcript": "PNNL Representative: ap at pnnl.gov"
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -131,29 +122,24 @@
         "reasoning": "The PNNL representative indicated a specific requirement for a purchase order number to facilitate payment, which is a necessary step in the payment process.",
         "answer": true,
         "transcript": "Company X Representative: Do you need a purchase order number before we send the invoices?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "The risk of default could be considered moderate due to the conditionality of receiving a purchase order number, which seems essential for processing any payments; failure to get this may lead to delays.",
-        "answer": true,
-        "transcript": "PNNL Representative: if we don't have that PO number, it you know, it's very hard to find that information to pay your invoice properly."
       }
     ]
   },
   {
+    "invoice_no" : "JHIQFXMW7U",
     "transcript": "**Agent:** Teresa from [Company Name]\n\n**Debtor:** Henk\n\n\n**Transcription:**\n\n[Sound of phone ringing and being picked up]\n\n**Henk:** Hallo.  [Clears throat] Hallo, this is Henk.\n\n**Teresa:** Hello.\n\n**Henk:** Hello.\n\n**Teresa:** Hi, good day. This is Teresa from [Company Name]. Am I speaking with [Debtor's Name]?\n\n**Henk:** Yes. Wh- what is your name again?\n\n**Teresa:** Teresa from [Company Name]. This is to ask for your assistance to provide the purchase order number of the invoice 1452655563.\n\n**Henk:** What is this for?\n\n**Teresa:** For the published manuscript.\n\n**Henk:** For a published manuscript?\n\n**Teresa:** Yes.\n\n**Henk:** In a which journal?\n\n**Teresa:** Yes. This is to ask for for the purchase order number of the invoice 1452655563.\n\n**Henk:** The which which journal?\n\n**Teresa:** Characterization of NEB pathogenic variants in patients reveals novel nemaline myopathy disease. Are you familiar with that?\n\n**Henk:** Ye- can you maybe send me an email about it? Uh, this this connection isn't good, I cannot really understand everything well.\n\n**Teresa:** Um, can you confirm your email address? [Debtor's Email Address]?\n\n**Henk:** Yeah, that's correct.\n\n**Teresa:** Okay. I will send an email after this call regarding the purchase order number. You can\n\n**Henk:**  Getting emails from us?\n\n**Teresa:** Yes.\n\n**Henk:** Yeah, uh that's good. Yeah, I will\n\n**Teresa:** Okay. Thank you for calling. Thank you.\n\n**Henk:** Have a nice day.\n\n**Teresa:** Good day. Goodbye.\n\n**Henk:** Goodbye.\n\n[Sound of phone call ending]",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given that Henk showed reluctance to acknowledge the invoice due and requested more information rather than expressing readiness to pay, there is a high risk of payment default.",
+        "answer": true,
+        "transcript": "**Henk:** Yeah, uh that's good. Yeah, I will"
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent confirmed that they were speaking with Henk, who is the debtor. Henk confirmed his identity when he answered the call.",
         "answer": true,
         "transcript": "**Teresa:** Am I speaking with [Debtor's Name]?  \n**Henk:** Yes."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent asked for Henk's email address and Henk confirmed that the provided email address was correct, indicating the agent received the accurate contact information.",
-        "answer": true,
-        "transcript": "**Teresa:** Um, can you confirm your email address? [Debtor's Email Address]?  \n**Henk:** Yeah, that's correct."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -178,29 +164,24 @@
         "reasoning": "Henk requested an email with additional information, which implies that he needs clarification before he can address any payment related to the invoice.",
         "answer": true,
         "transcript": "**Henk:** Can you maybe send me an email about it?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given that Henk showed reluctance to acknowledge the invoice due and requested more information rather than expressing readiness to pay, there is a high risk of payment default.",
-        "answer": true,
-        "transcript": "**Henk:** Yeah, uh that's good. Yeah, I will"
       }
     ]
   },
   {
+    "invoice_no" : "J2YJKG8TUP",
     "transcript": "**Agent:** A debt collection agent from a publishing company (anonymized as \"Company X\").\n\n**Debtor:** James (surname anonymized).\n\n\n**Transcription:**\n\n**Agent:** Hello.\n\n**Debtor:** Hello.\n\n**Agent:** Hello, this is [Agent's Name]. I'm calling from Company X. Am I speaking with James [Surname]?\n\n**Debtor:** Yes.\n\n**Agent:** Um, I'm calling in regards with your open invoice that hasn't paid yet.\n\n**Debtor:** Uh, which one?\n\n**Agent:** It is 1452289259. And uh, may I have your active email address so we can send you the invoice?\n\n**Debtor:** Um, just a where are you calling from?\n\n**Agent:** I'm calling from Company X.\n\n**Debtor:** All right. So now I have issues with with that. Before before you guys published, I had spoken I think I still have the emails. I had spoken with one of those because I was a student. I'm still a student. I saw the invoice before the work got published. And then I objected. I told them I don't want",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given the debtor's objections to the invoice and lack of acceptance of the debt, combined with their student status which may imply limited financial capability, the risk of payment default is high.",
+        "answer": true,
+        "transcript": "Debtor: I had spoken ... I told them I don't want."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The debtor confirmed their identity by acknowledging that they are James [Surname], which indicates that the agent reached the correct point-of-contact for the debt collection.",
         "answer": true,
         "transcript": "Agent: Hello, this is [Agent's Name]. I'm calling from Company X. Am I speaking with James [Surname]? Debtor: Yes."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent asked for the debtor's active email address to send the invoice, but the debtor did not provide this information in the transcript. Therefore, it cannot be concluded that the correct contact information was obtained.",
-        "answer": false,
-        "transcript": "Agent: And uh, may I have your active email address so we can send you the invoice? Debtor: Um, just a where are you calling from?"
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -225,29 +206,24 @@
         "reasoning": "The debtor did not outline any specific requirements for payment during the conversation; they simply stated previous objections to the invoice itself.",
         "answer": false,
         "transcript": "Debtor: I had spoken with one of those because I was a student... I objected."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given the debtor's objections to the invoice and lack of acceptance of the debt, combined with their student status which may imply limited financial capability, the risk of payment default is high.",
-        "answer": true,
-        "transcript": "Debtor: I had spoken ... I told them I don't want."
       }
     ]
   },
   {
+    "invoice_no" : "NCGH4MUGF0",
     "transcript": "Here's a transcription of the conversation, with anonymization as requested.  Note that it's difficult to definitively identify the caller as a debt collection agent without more context.  The caller's behavior and language strongly suggest this, but it's not explicitly stated.\n\n**Participants:**\n\n* **Debtor:**  The recipient of the call.\n* **Caller:** The individual initiating the call, strongly implied to be a debt collection agent.\n\n\n**Transcription:**\n\n**Caller:** Hello?\n\n**Debtor:** Hello?\n\n**Caller:** Hello.  Can you hear me?\n\n**Debtor:** Oh, wait a minute. Let me Let me go. Uh, let me uh It's noisy where I was. So go ahead. Who is this?\n\n**Caller:** Hello. This is [Caller's Name] calling from [Company Name], and I'm looking for\n\n**Debtor:** Who is this? No, say this again. Who is this?\n\n**Caller:** [Caller's Name] from [Company Name].\n\n**Debtor:** Say Say it again. I can't I can't make it out. Say it one more time.\n\n**Caller:** It's from [Company Name].\n\n**Debtor:** I I can't understand you. I'm sorry. I'm going to hang up. I just can't make out what you're saying.\n\n**Caller:** Um I'm looking for [Debtor's Name].\n\n**Debtor:** Uh, who is this? You have to identify yourself.\n\n**Caller:** I'm [Caller's Name] calling from [Company Name], and this is regarding your open invoice. Are you familiar with the manuscript title, \"The Clock in Growing Hyphae and Their Synchronization in *Neurospora crassa*\"?\n\n**Debtor:** Yes. Okay. Yes. Uh-huh. What What And what Where Why are you calling about that?\n\n**Caller:** Okay. I'm I am calling because upon checking here, you have an open invoice amounting $3,965 USD, and can you provide me a tentative date where\n\n**Debtor:** Okay, but what you should do is I will I will check with uh the the uh accounting group and see if they paid it. So But that's the one you're you're worried about. Okay, I will check with them. Um and I will ask if they paid it. Because I certainly turned it in for payment.\n\n**Caller:** After this call, I'll send you an email with a copy of your invoice.\n\n**Debtor:** Um I'm going to you know, we we get a lot of scams from places. Uh So I'm not sure. I'm I'm going to check it and if it's a scam, you won't hear from me. So I We get scammed all the time for uh invoices that never took place. But I will uh I I'm going to confirm this and and see whether or not it's it's been paid already. Okay?\n\n**Caller:** Okay, sure.\n\n**Debtor:** Yeah, I'm just not going to take you at your word because I've received emails in the past that claimed to be [Company Name], and they weren't [Company Name]. They were just scams. So uh I'm going to check. Um Uh But you go ahead and send the email, but if it's a false email, I'm going to have the police follow up on it. Okay?\n\n**Caller:** Okay. Yes, sure. Okay. Bye.\n\n**Debtor:** Bye.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "The debtor's suspicion of the call and their stated intention to investigate before making any payment indicates a high risk of payment default if they find the claim to be dubious.",
+        "answer": true,
+        "transcript": "Debtor: I'm just not going to take you at your word because I've received emails in the past that claimed to be [Company Name], and they weren't [Company Name]."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The debtor confirms they are aware of the invoice and the manuscript in question, suggesting that the contact details are appropriate. However, the debtor's engagement is cautious, indicating uncertainty about the caller's legitimacy.",
         "answer": true,
         "transcript": "Caller: I'm looking for [Debtor's Name].\nDebtor: Uh, who is this? You have to identify yourself."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The caller references the debtor by name during the conversation, indicating they likely have the correct contact information, but the debtor’s skepticism suggests confirmation is needed.",
-        "answer": true,
-        "transcript": "Caller: I'm looking for [Debtor's Name]."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -272,29 +248,24 @@
         "reasoning": "The debtor requires confirmation from their accounting group before proceeding, which suggests they are not ready to make a payment without verifying the validity of the debt.",
         "answer": true,
         "transcript": "Debtor:  Okay, but what you should do is I will I will check with uh the the uh accounting group."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "The debtor’s suspicion of the call and their stated intention to investigate before making any payment indicates a high risk of payment default if they find the claim to be dubious.",
-        "answer": true,
-        "transcript": "Debtor: I'm just not going to take you at your word because I've received emails in the past that claimed to be [Company Name], and they weren't [Company Name]."
       }
     ]
   },
   {
+    "invoice_no" : "5XZ7TSCE4C",
     "transcript": "**Agent:** Ryan from [Company Name]\n\n**Debtor:** Sangwook Shin\n\n\n**Transcription:**\n\nAgent: Hello.\n\nDebtor: Hello?\n\nAgent: Hi there. This is Ryan from [Company Name]. Am I speaking with Sangwook Shin?\n\nDebtor: This is he.\n\nAgent: Ah, Ryan from [Company Name].\n\nDebtor: Okay.\n\nAgent: Uh, I'm calling about your open access publication, the *Diffuse Pore-Size Remote Space Separation and Transport of Biomolecular Condensates*. Your invoice number 1452742274, amounting $3,395. Could you please let me know when we expect to pay this invoice? This will help us avoid sending you a reminder.\n\nDebtor: Uh, I have to check with our uh purchasing officer.\n\nAgent: Mhm.\n\nDebtor: Um, I thought it's been through um, I'll check with the our staff.\n\nAgent: Okay. So, I will send you an email regarding this uh invoice. Is that alright with you?\n\nDebtor: Mhm.\n\nAgent: Uh, can you please confirm your email address? san g w o o s @[University Email Domain]?\n\nDebtor: Right.\n\nAgent: Okay. Uh, thank you so much for uh answering our call. Once again, this is Ryan. Have a great day. Bye.\n\nDebtor: Okay, thank you. Bye.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "The debtor's need to check with a purchasing officer before proceeding with payment suggests potential bureaucratic hurdles, which often correlate with a higher risk of default if there are internal delays or disagreements.",
+        "answer": true,
+        "transcript": "Debtor: Uh, I have to check with our uh purchasing officer."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent confirmed the identity of the person he was speaking to by asking if he was speaking with Sangwook Shin, and the debtor confirmed that he was indeed Sangwook Shin.",
         "answer": true,
         "transcript": "Agent: Hi there. This is Ryan from [Company Name]. Am I speaking with Sangwook Shin? Debtor: This is he."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent confirmed the debtor's email address by repeating it back, and the debtor confirmed it was correct, indicating the agent has the right contact information.",
-        "answer": true,
-        "transcript": "Agent: Uh, can you please confirm your email address? san g w o o s @[University Email Domain]? Debtor: Right."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -319,29 +290,24 @@
         "reasoning": "The debtor mentioned checking with the purchasing officer, indicating that he might have specific internal processes to go through before payment can be made, but did not specify what those requirements are.",
         "answer": false,
         "transcript": "Debtor: Uh, I have to check with our uh purchasing officer."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "The debtor's need to check with a purchasing officer before proceeding with payment suggests potential bureaucratic hurdles, which often correlate with a higher risk of default if there are internal delays or disagreements.",
-        "answer": true,
-        "transcript": "Debtor: Uh, I have to check with our uh purchasing officer."
       }
     ]
   },
   {
+    "invoice_no" : "HZL0HXYQ6W",
     "transcript": "**Agent:** Ryan from [Company Name]\n\n**Debtor:** [Debtor Name]\n\n\n**Transcription:**\n\n\nAgent: Hi there. This is Ryan from [Company Name]. I'm speaking with [Debtor Name]?\n\nDebtor: Uh, yes.\n\nAgent: Uh, I'm calling about your open access publication, uh, [Publication Title]. Your invoice number is 1452741260, amounting $6,700. Uh, could you please let me know when we expect to pay this invoice? This will help us avoid sending you a reminder.\n\nDebtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible.\n\nAgent: Uh, may Can you please confirm if the if your email address is correct here on our system?  d e n g h @ [University Email Domain]?\n\nDebtor: Uh, yes.\n\nAgent: Okay. Uh, I will send you an email regarding this invoice. Uh, can you please reply about the the date so we can uh update your uh make take a note of our system, so you won't receive an email regarding this invoice. Is that all right with you?\n\nDebtor: Uh, sure.\n\nAgent: Okay. Thank you for answering our call. Have a great day. Bye.\n\nDebtor: Bye.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given the debtor's proactive attitude towards confirming the invoice and their intention to ensure prompt payment, the risk of default appears to be low.",
+        "answer": false,
+        "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The debtor confirmed their identity by saying 'Uh, yes' when asked if they were '[Debtor Name]'.",
         "answer": true,
         "transcript": "Agent: Hi there. This is Ryan from [Company Name]. I'm speaking with [Debtor Name]? Debtor: Uh, yes."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The debtor confirmed that the email address mentioned by the agent is correct, indicating that the agent has the right contact information.",
-        "answer": true,
-        "transcript": "Agent: Uh, may Can you please confirm if your email address is correct here on our system? d e n g h @ [University Email Domain]? Debtor: Uh, yes."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -366,29 +332,24 @@
         "reasoning": "The debtor did not specify any particular requirements to facilitate the payment.",
         "answer": false,
         "transcript": "No statement indicating any specific requirements was made by the debtor."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given the debtor's proactive attitude towards confirming the invoice and their intention to ensure prompt payment, the risk of default appears to be low.",
-        "answer": false,
-        "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
       }
     ]
   },
   {
+    "invoice_no" : "N9HF9V0AFE",
     "transcript": "**Agent:** A debt collection agent from an unnamed publishing group.\n\n**Debtor:** Radmir Derda\n\n**Transcribed and Anonymized Conversation:**\n\n\nAgent: Hi, this is [Agent Name] calling from [Company Name]. Am I speaking with Radmir Derda?\n\nDebtor: Speaking.\n\nAgent: Hi, yes, hello. I'm calling in regards with the open invoice. It is 1452515842.\n\nDebtor: Mhm.\n\nAgent: Are you aware with the invoice? Because we already sent you several\n\nDebtor: Yeah, it's being paid as we speak.\n\nAgent: Oh, for that one, can you please send us a proof of payment regarding with the\n\nDebtor: Yeah, I sent it to my payment department. They'll be in touch shortly.\n\nAgent: Okay, for this one, can you please reconfirm your email address?\n\nDebtor: It is [Radmir's email address]\n\nAgent: Okay. Thank you very much for answering the call. Goodbye.\n\nDebtor: Goodbye.\n\nAgent: Good.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given that the debtor claimed the invoice is being paid and confirmed that they sent it to their payment department, this suggests that the risk of default is low, as they are actively attending to the payment.",
+        "answer": false,
+        "transcript": "Debtor: Yeah, it's being paid as we speak."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent confirmed that they were speaking to Radmir Derda at the beginning of the call, and the debtor confirmed their identity with 'Speaking.' This indicates that the agent reached the correct contact.",
         "answer": true,
         "transcript": "Agent: Hi, this is [Agent Name] calling from [Company Name]. Am I speaking with Radmir Derda? Debtor: Speaking."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The debtor confirmed their email address when the agent asked to reconfirm it. This shows that the agent obtained the correct contact information from the debtor during the conversation.",
-        "answer": true,
-        "transcript": "Agent: Okay, for this one, can you please reconfirm your email address? Debtor: It is [Radmir's email address]"
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -413,29 +374,24 @@
         "reasoning": "The debtor did not request any specific arrangement or additional information to assist them with the payment, as the conversation focused on confirming the invoice information and proof of payment.",
         "answer": false,
         "transcript": "Agent: Oh, for that one, can you please send us a proof of payment regarding with the"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given that the debtor claimed the invoice is being paid and confirmed that they sent it to their payment department, this suggests that the risk of default is low, as they are actively attending to the payment.",
-        "answer": false,
-        "transcript": "Debtor: Yeah, it's being paid as we speak."
       }
     ]
   },
   {
+    "invoice_no" : "TJR4DOKVFD",
     "transcript": "This conversation is between a debt collection agent from a publishing company and a customer/debtor.  The company name is anonymized as \"Publisher X\" and the names of the individuals are anonymized as \"Agent\" and \"Debtor\".\n\n\n**Transcription:**\n\n**Agent:** Hello.\n\n**Debtor:** Hello.\n\n**Agent:** Hello. Hi, good day. This is Agent calling from Publisher X. We believe that we received your call a while ago.\n\n**Debtor:** Um, are you Are you from Publisher X?\n\n**Agent:** Um No, I'm not, but I I work with Publisher X. I didn't quite hear.\n\n**Debtor:** I'm sorry. Um, could you please repeat that for me? Are you the collections side?\n\n**Agent:** I'm sorry. I am calling from Publisher X. Are you familiar with Publisher X?\n\n**Debtor:** Yes, that is who I'm trying to contact. I'm trying to contact [Name].\n\n**Agent:** Okay. Um, upon checking, he is not available as of the moment.\n\n**Debtor:** Um, can you put me through to the collections specialist?\n\n**Agent:** Yeah, I",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given the lack of communication with the correct person and no acknowledgment of debt obligation from the debtor, there is a higher risk of payment default.",
+        "answer": true,
+        "transcript": ""
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The debtor is trying to reach a specific individual, indicating that the conversation didn't initially connect with the desired contact for collections.",
         "answer": false,
         "transcript": "**Debtor:** Yes, that is who I'm trying to contact. I'm trying to contact [Name]."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent does not have the debtor's specific contact information as they are trying to connect to another person and have not confirmed the debtor's account details yet.",
-        "answer": false,
-        "transcript": "**Debtor:** Um, can you put me through to the collections specialist?"
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -460,29 +416,24 @@
         "reasoning": "The debtor did not mention any requirements that would assist them in payment, as the conversation is mainly about connecting with someone.",
         "answer": false,
         "transcript": "**Debtor:** Um, can you put me through to the collections specialist?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given the lack of communication with the correct person and no acknowledgment of debt obligation from the debtor, there is a higher risk of payment default.",
-        "answer": true,
-        "transcript": ""
       }
     ]
   },
   {
+    "invoice_no" : "79H1L2HNN3",
     "transcript": "**Agent:**  Debt Collection Agent\n\n**Debtor:**  Caller\n\n**Conversation Transcript:**\n\n**Agent:**  Thank you for calling. Your call may be recorded for quality and training purposes. Thank you for calling. My name is [Agent Name]. How may I help you?\n\n**Debtor:** Hi, good day. This is [Caller Name] from [Company Name]. Can you please transfer me to your accounts payable department?\n\n**Agent:** Okay. Are you looking for a specific department?\n\n**Debtor:** Um, accounts payable.\n\n**Agent:** Accounts payable. Okay. Thank you very much.\n\n**Debtor:** That's fine. Are we looking for the [University Name]?\n\n**Agent:** Yes.\n\n**Debtor:** Thank you one moment.\n\n**Agent:** I'm not coming up with anything for accounts payable. Are you sure you're trying to reach the college or the hospital?\n\n**Debtor:** [University Name].\n\n**Agent:** Excuse me? Um, university? I cannot hear you, ma'am.\n\n**Debtor:** Um, it's a university.\n\n**Agent:** I still am not understanding what you're saying. Um, it's a university. College. You're trying to reach the college for accounts payable. Is that correct?\n\n**Debtor:** Yes, correct.\n\n**Agent:** Thank you. Okay, let me give you the correct phone number you need to dial, ma'am.\n\n**Agent:** Thank you. That number will be [Phone Number].\n\n**Agent:** Thank you very much for your assistance, ma'am. Contact number and have a beautiful day.\n\n\n**Note:**  The phone number provided by the agent is anonymized.  The bracketed placeholders ([...]) are meant to be replaced with the actual information from the provided audio.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given that there is no engagement or acknowledgment of payment obligations from the debtor and they are seeking to reach a department without discussing any debts, this suggests a high risk of non-payment or default.",
+        "answer": true,
+        "transcript": "**Agent:** I cannot hear you, ma'am."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The debtor was looking to speak with the accounts payable department of a university, which is a distinct and specific point of contact; however, the agent was unable to find the correct records for this department, indicating a potential mismatch in contacts.",
         "answer": false,
         "transcript": "**Debtor:** Hi, good day. This is [Caller Name] from [Company Name]. Can you please transfer me to your accounts payable department?"
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The conversation does not indicate that the agent collected any contact information from the debtor; they only discussed transferring the call to the right department.",
-        "answer": false,
-        "transcript": "**Agent:** Okay. Are you looking for a specific department?"
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -507,29 +458,24 @@
         "reasoning": "The debtor did not express any specific requirements or conditions to facilitate payment; their primary need was to reach the accounts payable department.",
         "answer": false,
         "transcript": "**Debtor:** That's fine. Are we looking for the [University Name]?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given that there is no engagement or acknowledgment of payment obligations from the debtor and they are seeking to reach a department without discussing any debts, this suggests a high risk of non-payment or default.",
-        "answer": true,
-        "transcript": "**Agent:** I cannot hear you, ma'am."
       }
     ]
   },
   {
+    "invoice_no" : "NK3XLRDPQ1",
     "transcript": "Here's a transcription of the conversation, anonymizing identifying information as requested.  Note that because the audio quality is poor in places, some words may be slightly uncertain.\n\n**Agent:** Accounts Payable Front Desk\n\n**Debtor:**  [Name Redacted] from [Company Name Redacted]\n\n\n**Conversation:**\n\n**Agent:** Thank you for calling. Accounts Payable front desk. Please hold for the next available agent.  (Hold music) Accounts Payable this is [Agent's Name Redacted]\n\n**Debtor:** Hi, good day. This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices.\n\n**Agent:** Sorry, can you repeat what you first said?\n\n**Debtor:** This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices.\n\n**",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Since the debtor has not confirmed acceptance of the invoice or a willingness to pay, and there is no commitment made, the risk of payment default could be assessed as high based on the available information.",
+        "answer": true,
+        "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent answered the call at the Accounts Payable front desk and spoke to a person explicitly identifying themselves as a representative of a company, suggesting that this is the correct point-of-contact for invoice-related matters.",
         "answer": true,
         "transcript": "**Agent:** Thank you for calling. Accounts Payable front desk. Please hold for the next available agent.  (Hold music) Accounts Payable this is [Agent's Name Redacted]**Debtor:** Hi, good day. This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent confirmed the identity of the debtor by name and company, meaning they have the correct contact information to address any invoices or queries.",
-        "answer": true,
-        "transcript": "**Debtor:** This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -554,29 +500,24 @@
         "reasoning": "The only requirement stated by the debtor was to obtain an email address for sending invoices, which does not specifically help them pay but rather facilitates the billing process.",
         "answer": true,
         "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Since the debtor has not confirmed acceptance of the invoice or a willingness to pay, and there is no commitment made, the risk of payment default could be assessed as high based on the available information.",
-        "answer": true,
-        "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
       }
     ]
   },
   {
+    "invoice_no" : "P2QOH8WTYL",
     "transcript": "**Agent:** Adrian from UH Foundation\n\n**Debtor:**  A representative from [Anonymized Company Name]\n\n\n**Transcription:**\n\n[Sound of phone ringing and being answered]\n\n**Agent:** UH Foundation. This is Adrian.\n\n**Debtor:** Hi, this is [Anonymized Name]. I'm calling from [Anonymized Company Name]. Can I get an update regarding with the open invoice? The invoice is 1452695759.\n\n**Agent:** Um, I'm sorry. I did not hear what you said at the beginning. Who Where are you calling from?\n\n**Debtor:** I'm calling from [Anonymized Company Name].\n\n**Agent:** [Anonymized Company Name]?\n\n**Debtor:** Yes.\n\n**Agent:** Okay. And why are you calling?\n\n**Debtor:** I'm calling in regards with the open invoice that hasn't paid yet.\n\n**Agent:** And where was that invoice sent to?\n\n**Debtor:** Actually, you already asked uh Kaying to check if the invoice is already paid, but unfortunately it appears here on our end that it's still unpaid.\n\n**Agent:** I'm sorry, you spoke with who?",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given that the debtor is seeking an update on an open invoice that is unpaid, it could indicate potential risk for default. However, without further context about their payment history or ability to pay, a clear assessment is challenging.",
+        "answer": true,
+        "transcript": "Debtor: Actually, you already asked uh Kaying to check if the invoice is already paid, but unfortunately it appears here on our end that it's still unpaid."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The debtor identifies themselves as a representative from Anonymized Company Name, and they are inquiring specifically about an open invoice. This implies that the agent is indeed speaking with a point-of-contact from the debtor's company.",
         "answer": true,
         "transcript": "Debtor: Hi, this is [Anonymized Name]. I'm calling from [Anonymized Company Name]. Can I get an update regarding with the open invoice? The invoice is 1452695759."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent asks for the company name and clarifies the identity of the debtor, establishing that the conversation is with an acknowledged representative of the debtor's company. However, the agent doesn't gather more specific contact information such as a phone number or email during the conversation.",
-        "answer": true,
-        "transcript": "Agent: Okay. And why are you calling? Debtor: I'm calling in regards with the open invoice that hasn't paid yet."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -601,29 +542,24 @@
         "reasoning": "There are no specific requirements mentioned by the debtor in the transcript that would assist in the payment of the invoice. They focus on getting an update.",
         "answer": false,
         "transcript": "Agent: Um, I'm sorry. I did not hear what you said at the beginning."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given that the debtor is seeking an update on an open invoice that is unpaid, it could indicate potential risk for default. However, without further context about their payment history or ability to pay, a clear assessment is challenging.",
-        "answer": true,
-        "transcript": "Debtor: Actually, you already asked uh Kaying to check if the invoice is already paid, but unfortunately it appears here on our end that it's still unpaid."
       }
     ]
   },
   {
+    "invoice_no" : "42V96LI3SN",
     "transcript": "**Agent:**  Collection Agent\n\n**Debtor:**  Debtor\n\n\n**Conversation Transcript:**\n\n**Agent:** Hello?\n\n**Debtor:** Hi.\n\n**Agent:** Hello?\n\n**Debtor:** Hello. Yes.\n\n**Agent:** Yes. This is [Agent Name] calling from [Company Name] and I'm looking for [Debtor Name].\n\n**Debtor:** [Debtor Name] here.\n\n**Agent:** Oh, I think you have the wrong number. What is this in reference to?\n\n**Debtor:** Uh, it's regarding the [Invoice Type] invoice and it's for [Company Name].\n\n**Agent:** I think you have the right number, but my name is [Debtor Name], and I work for [Company Name] and I am working on getting payment for the invoice. Let me look up uh the invoice that I am working on and make sure we're both working on the same thing.\n\n**Debtor:** Okay.\n\n**Agent:** So, let me just a minute to look this up.\n\n**Agent:** [Agent Name] here. Just trying to look up the number that you would have. Do you know the invoice number?\n\n**Debtor:** Um, the invoice number is [Invoice Number].\n\n**Agent:** Yes, I am working on that. Um, that is in progress. I would have to double check with our finance team and see what exactly that would be paid. Um, I think it is scheduled. It, we had a little issue with our system and there's like a net 30 from the day that you sent it, but it ended up, it worked out a little it was a little complicated, so I know it's delayed, but it is in progress. Let me see if I can find out for you a date that we are going to pay it.\n\n**Debtor:** Okay.\n\n**Agent:** Can you provide me your name and your email address where I can send an email regarding your invoice?\n\n**Debtor:** Sure, no problem. My name is [Debtor Name] and my email is [Debtor Email Address].\n\n**Agent:** Okay, so after this call, I'll send you uh an email regarding this and a copy of your invoice. Is that great?\n\n**Debtor:** Oh, great. That would be very helpful. And then I can follow up with the finance team just double check that it's uh scheduled for payment and then I'll let you know what date that is.\n\n**Agent:** Okay.\n\n**Agent:** Um, this is [Agent Name].\n\n**Debtor:** [Debtor Name].\n\n**Agent:** Okay. Great. All right. So I look forward to receiving your email and I'll get back to you soon as I can.\n\n**Debtor:** Okay, thanks so much. Have a good day.\n\n**Agent:** Bye. You too. Thanks. Goodbye.\n\n\n**Note:**  The bracketed placeholders ([...]) are meant to be replaced with the actual information.  Do not use this transcript for any real-world communication.  This is a sample and should not be considered a template.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "The conversation suggests that the debtor has every intention of following up and is engaged in the process, which lowers the risk of payment default. However, the delay in payment suggests a moderate risk.",
+        "answer": false,
+        "transcript": "**Agent:** I know it's delayed, but it is in progress."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent confirmed that the person on the line is indeed the debtor they are looking for, but the initial conversation implies that there was some confusion about the contact number. However, they both verified the identities and established a connection regarding the invoice.",
         "answer": true,
         "transcript": "**Agent:** Yes. This is [Agent Name] calling from [Company Name] and I'm looking for [Debtor Name].\n\n**Debtor:** [Debtor Name] here."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The debtor provided their name and email address when prompted by the agent, which confirms that the agent received accurate contact information.",
-        "answer": true,
-        "transcript": "**Debtor:** Sure, no problem. My name is [Debtor Name] and my email is [Debtor Email Address]."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -648,29 +584,24 @@
         "reasoning": "The debtor asked to receive an email with details about the invoice which indicates they are seeking more information to facilitate the payment process, but no specific payment conditions were stated.",
         "answer": true,
         "transcript": "**Debtor:** Oh, great. That would be very helpful."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "The conversation suggests that the debtor has every intention of following up and is engaged in the process, which lowers the risk of payment default. However, the delay in payment suggests a moderate risk.",
-        "answer": false,
-        "transcript": "**Agent:** I know it's delayed, but it is in progress."
       }
     ]
   },
   {
+    "invoice_no" : "Q6TV2P3218",
     "transcript": "**Agent:** University of Florida Accounts Payable Department\n\n**Debtor:**  A customer of the University of Florida\n\n**Conversation Transcript:**\n\n**Agent:** Good afternoon. Thank you for calling the University of Florida.  How may I direct your call?\n\n**Debtor:** Hi, good day. This is [redacted] from [redacted]. Can you please transfer me to your accounts payable department?\n\n**Agent:** Yes, one moment please.\n\n**(Connection to Accounts Payable Department)**\n\n**Agent:** Hi, good day. This is [redacted]. How can I help you?\n\n**Debtor:** Hi, good day. This is [redacted] from [redacted]. I would like to ask for an email address where we can send invoices.\n\n**Agent:** Sure, one moment please.\n\n**Agent:** Okay, thank you very much. It's UF. [redacted].invoices@[redacted].com\n\n**Debtor:** Okay, thank you very much. In addition, do you also need the purchase order number of the invoices before we send it to this email address?\n\n**Agent:** Um, I would not be able to do that, but I could get you in contact with [redacted] if you would like to confirm.\n\n**Debtor:** No, it's this is okay. An email address will do. Thank you very much.\n\n**Agent:** Of course. Have a great day. Goodbye.\n\n**Debtor:** Thank you, and you too. Have a great day. Goodbye.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Based on the conversation, there is not enough evidence to assess whether the risk of payment default is high, as the debtor did not confirm any invoice was due, nor did they explicitly express intent to pay or conditions surrounding it.",
+        "answer": true,
+        "transcript": "**Agent:** Um, I would not be able to do that, but I could get you in contact with [redacted] if you would like to confirm."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent successfully connected the debtor to the Accounts Payable Department when asked by the debtor, indicating they reached the correct contact point for the inquiry.",
         "answer": true,
         "transcript": "**Agent:** Yes, one moment please.  **(Connection to Accounts Payable Department)**  **Agent:** Hi, good day. This is [redacted]. How can I help you?"
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "Although the conversation does not provide specific details about the debtor's contact information, the debtor was able to give their name and ask for the appropriate email for sending invoices, suggesting they were sufficiently identified for the purpose of the conversation.",
-        "answer": true,
-        "transcript": "**Debtor:** Hi, good day. This is [redacted] from [redacted]. Can you please transfer me to your accounts payable department?"
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -695,29 +626,24 @@
         "reasoning": "The debtor asked for an email address for invoices and also inquired about a purchase order number, indicating they are gathering necessary information before processing payment, though no specific requirement was laid out directly related to payment.",
         "answer": true,
         "transcript": "**Debtor:** Okay, thank you very much. In addition, do you also need the purchase order number of the invoices before we send it to this email address?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Based on the conversation, there is not enough evidence to assess whether the risk of payment default is high, as the debtor did not confirm any invoice was due, nor did they explicitly express intent to pay or conditions surrounding it.",
-        "answer": true,
-        "transcript": "**Agent:** Um, I would not be able to do that, but I could get you in contact with [redacted] if you would like to confirm."
       }
     ]
   },
   {
+    "invoice_no" : "0K5PQGG4T9",
     "transcript": "**Agent:**  Collection Agent\n\n**Debtor:**  Debtor\n\n\n**Conversation Transcript:**\n\n**Agent:** For quality assurance, this call may be recorded or monitored. Thank you for calling [Company Name] Accounts Payable Shared Service Center.\n\n**Debtor:** Hi, this is [Debtor Name] calling from [City, State]. Can you please transfer me over to your Accounts Payable department?\n\n**Agent:** Sure.  May I have the account number before I connect you?\n\n**Debtor:** Yes, sure. Thank you so much.\n\n**Agent:** 443-997-6688\n\n**Debtor:**  Just to confirm, it is 443-997-6688. Is that correct?\n\n**Agent:** Yes, that's correct.\n\n**Debtor:** Thank you.  Can you transfer me now?\n\n**(Connection transfer)**\n\n**Agent:** (After connection) Good morning. How can I help you?\n\n**Debtor:** Hi, I just want to confirm the correct email address where we can send the invoices. It is invoices@jh.edu. Is that correct?\n\n**Agent:** Yes, so it's going to be invoices@jh.edu.\n\n**Debtor:** Uh, before we send the invoices, they need the purchase order number?\n\n**Agent:** Yes, attached to the invoice.\n\n**Debtor:** Okay, thank you so much for that. And make sure when you send the invoices, it comes in PDF format?\n\n**Agent:** Uh, yes. We will make sure that this is in PDF format.\n\n**Debtor:** Okay, have a great day.\n\n**Agent:** Thank you. Have a good day.\n\n\n**Agent:** For quality assurance, this call may be recorded or monitored. Thank you for calling the Accounts Payable Shared Service Center. Please listen carefully to the following menu options as they have recently changed. For hours of operation, general email address, press one. If you are a vendor or payee, press two. If you are an employee or calling within the organization, press three. To repeat these options, press four.\n\n**(This part of the conversation was not relevant to the initial request, so it is omitted.)**",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Based on the conversation, it appears that the debtor did not engage in discussing payment nor express intent to pay, which increases the likelihood of payment default.",
+        "answer": true,
+        "transcript": "Debtor: Okay, have a great day."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The conversation indicates that the debtor identified themselves and their location before asking to be transferred. The agent then confirmed the account number provided by the debtor, implying that they reached the correct point-of-contact for the requested information.",
         "answer": true,
         "transcript": "Debtor: Hi, this is [Debtor Name] calling from [City, State]. Can you please transfer me over to your Accounts Payable department?"
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The agent confirmed the account number given by the debtor, indicating the agent successfully obtained the correct contact information related to this specific transaction.",
-        "answer": true,
-        "transcript": "Agent: Yes, that's correct."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -742,29 +668,24 @@
         "reasoning": "The debtor did not specify any requirements that would assist them in making a payment in this conversation. Their request was solely procedural for email and document format.",
         "answer": false,
         "transcript": "Debtor: Okay, thank you so much for that. And make sure when you send the invoices, it comes in PDF format?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Based on the conversation, it appears that the debtor did not engage in discussing payment nor express intent to pay, which increases the likelihood of payment default.",
-        "answer": true,
-        "transcript": "Debtor: Okay, have a great day."
       }
     ]
   },
   {
+    "invoice_no" : "8GCR1YK0YB",
     "transcript": "Agent:  Collection Agent\n\nDebtor:  Alex\n\n\nConversation:\n\nAgent: Hello.  This is [Agent Name] from [Company Name]. Am I speaking with Alex?\n\nDebtor: I can't hear you. Whoever you are. Am I speaking with Alex? Who's calling?\n\nAgent: This is [Agent Name] from [Company Name].\n\nDebtor: What is it about?\n\nAgent:  It's a follow up for invoice number [Invoice Number].\n\nDebtor: I'm sorry, I don't know what this is about. And I can hardly hear you. Is it... are you trying to tell me something or is it has to do with... I can't tell what you're talking about.\n\nAgent: About published manuscripts.\n\nDebtor: I'm sorry, what? About published manuscripts?\n\nAgent: One of my papers?\n\nDebtor: Yes. What about it?\n\nAgent: Um, this is to ask for your assistance to provide the PO.\n\nDebtor: For what? I think we've already... what were you talking about?\n\nAgent: Um... Is this Alex [Last Name]?\n\nDebtor: Could you send me an email with all the information? I think that will make things a lot more straightforward. Because what journal are you talking about?\n\nAgent: Can you provide your email address so I can send you an email?\n\nDebtor: Yes.\n\nAgent: What journal are you talking about? Please tell me.\n\nDebtor: It's [Journal Name]... binding protein [Abbreviation].\n\nAgent: I can't understand you. It's what? What journal? What journal is this about?\n\nDebtor: [Journal Name] binding protein [Abbreviation].\n\nAgent: Right. I believe we paid that. I believe we paid that. And we also had a discount that came along with that because the open access charges were to be grandfathered in based on the timing of the submission.\n\nDebtor: Would you mind providing us the proof of payment in order for us to allocate?\n\nAgent: We've already paid you. So why don't you send me an email then I will talk to my account people here and then we can find what we're talking about here.\n\nDebtor: Okay, thank you very much.\n\nAgent: [Email Address]. Is that your email address?\n\nDebtor: I'm sorry, I couldn't hear you. [Email Address].\n\nAgent: Yes, that's correct. That's correct.\n\nDebtor: Okay, thank you. I will send you an email after this call. Have a great day.\n\nAgent: Yep, thanks.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "Given the debtor's uncertainty about the invoice and their request for proof of payment, it indicates they may be unwilling or unable to pay without further clarification, suggesting a high risk of payment default.",
+        "answer": true,
+        "transcript": "Debtor: I'm sorry, I don't know what this is about."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent asked to confirm if the person on the line was Alex, and the debtor confirmed that they were, indicating that the agent reached the correct point-of-contact.",
         "answer": true,
         "transcript": "Agent: Hello. This is [Agent Name] from [Company Name]. Am I speaking with Alex? Debtor: I can't hear you. Whoever you are. Am I speaking with Alex?"
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "The debtor provided their email address upon request, indicating that the agent was able to collect the correct contact information needed for further communication.",
-        "answer": true,
-        "transcript": "Agent: Can you provide your email address so I can send you an email? Debtor: Yes."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
@@ -789,28 +710,23 @@
         "reasoning": "The debtor specifically requested proof of payment to clarify the situation and determine the need to allocate funds, indicating a requirement to help in deciding on payment.",
         "answer": true,
         "transcript": "Debtor: Would you mind providing us the proof of payment in order for us to allocate?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Given the debtor's uncertainty about the invoice and their request for proof of payment, it indicates they may be unwilling or unable to pay without further clarification, suggesting a high risk of payment default.",
-        "answer": true,
-        "transcript": "Debtor: I'm sorry, I don't know what this is about."
       }
     ]
   },
   {
+    "invoice_no" : "3H8B4B51MF",
     "transcript": "**Agent:**  Collection Agent\n\n**Debtor:**  Debtor\n\n\n**Conversation:**\n\n**Agent:** Hi there. This is [Agent Name], from [Company Name]. Uh, am I speaking with [Debtor Name]?\n\n**Debtor:** This is [Debtor Name], from [Company Name].\n\n**Agent:** What do you want?\n\n**Debtor:** Uh, I'm calling regarding about your open access publication. Uh, manuscript title, [Manuscript Title].  Short and spreading depolarization induced periorbital...  [rest of the title omitted]. Could you please let me know uh when we expect to pay this invoice? Uh, this will help us to avoid you sending unnecessary reminder about this uh invoice.\n\n**Agent:** I came here at the end of the month, that's when I get here. Are you mean this October right?\n\n**Debtor:** Yes.\n\n**Agent:** Okay, uh, alright, thank you. Uh, I will send you an email regarding this invoice. So, I'm creating uh... uh... I promise to pay here in an hour and that to avoid unnecessary notification for your email. Uh, thank you for answering our call. Have a great day. Bye.\n\n**Debtor:** Alright, bye-bye. Bye.",
     "answers": [
+      {
+        "question": "Is the risk of the payment default high?",
+        "reasoning": "The interaction indicates the debtor is engaged in the process and expressed a willingness to pay, which suggests that the risk of default seems low at this moment.",
+        "answer": false,
+        "transcript": "**Agent:** Okay, uh, alright, thank you... I promise to pay here in an hour..."
+      },
       {
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent identified the person he was speaking with as the intended debtor, confirmed by the debtor stating their name and context. Therefore, the agent reached the correct point of contact.",
         "answer": true,
-        "transcript": "**Agent:** Hi there. This is [Agent Name], from [Company Name]. Uh, am I speaking with [Debtor Name]?  **Debtor:** This is [Debtor Name], from [Company Name]."
-      },
-      {
-        "question": "Did the agent get the correct contact information of the debtor?",
-        "reasoning": "During the conversation, the agent confirmed they were speaking to the correct person, but there was no specific mention of collecting or verifying additional contact information such as phone number or email address aside from the discussed invoice.",
-        "answer": false,
         "transcript": "**Agent:** Hi there. This is [Agent Name], from [Company Name]. Uh, am I speaking with [Debtor Name]?  **Debtor:** This is [Debtor Name], from [Company Name]."
       },
       {
@@ -836,12 +752,6 @@
         "reasoning": "The debtor did not specify any requirements for payment during the conversation other than wanting information on when the invoice would be paid.",
         "answer": false,
         "transcript": "**Debtor:** Uh, I'm calling regarding about your open access publication. ... Could you please let me know uh when we expect to pay this invoice?"
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "The interaction indicates the debtor is engaged in the process and expressed a willingness to pay, which suggests that the risk of default seems low at this moment.",
-        "answer": false,
-        "transcript": "**Agent:** Okay, uh, alright, thank you... I promise to pay here in an hour..."
       }
     ]
   }

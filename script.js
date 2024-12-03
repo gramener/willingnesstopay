@@ -23,7 +23,7 @@ const $terms = document.querySelector("#terms");
 const $transcript = document.querySelector("#transcript");
 let terms = getTerms();
 let results = await fetch("transcripts.json").then((r) => r.json());
-
+results.forEach(({transcript, answers }) => {answers.forEach((answer) => {answer.timestamp = Math.random() * 1000;});});
 $transcriptForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   terms = getTerms();
@@ -70,15 +70,15 @@ function renderResults(results) {
       <table class="table">
         <thead>
           <tr>
-            <th>Transcript</th>
+            <th>Invoice No.</th>
             ${terms.map((term) => html`<th>${term}</th>`)}
           </tr>
         </thead>
         <tbody>
           ${results.map(
-            ({ transcript, answers, error }, index) => html`
+            ({ invoice_no, answers, error }, index) => html`
               <tr data-index="${index}">
-                <td class="no-overflow">${transcript}</td>
+                <td class="no-overflow">${invoice_no}</td>
                 ${error
                   ? html`<td class="text-danger" colspan="${terms.length}">${error}</td>`
                   : answers.map((answer) => html`<td>${answer.answer ? "✅" : "❌"}</td>`)}
@@ -113,17 +113,20 @@ function showAnswersModal(index) {
             <th>Question</th>
             <th>Answer</th>
             <th>Reasoning</th>
-            <th>Transcript</th>
+            <th>Transcript Snippet</th>
           </tr>
         </thead>
         <tbody>
           ${answers.map(
-            ({ question, answer, reasoning, transcript }) => html`
+            ({ question, answer, reasoning, transcript, timestamp }) => html`
               <tr>
                 <td>${question}</td>
                 <td>${answer ? "✅" : "❌"}</td>
                 <td>${reasoning}</td>
-                <td>${transcript}</td>
+                <td>
+                <div>${transcript}</div>
+                <small class="text-muted" data-bs-toggle="tooltip" title="Transcript: ${transcript}, Timestamp: ${timestamp}">${timestamp}</small>
+                </td>
               </tr>
             `
           )}
@@ -134,6 +137,12 @@ function showAnswersModal(index) {
   );
 
   modal.show();
+
+  // Initialize Bootstrap tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
 }
 
 $results.addEventListener("click", (event) => {
