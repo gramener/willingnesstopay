@@ -1,7 +1,9 @@
 /* globals bootstrap */
 import { render, html } from "https://cdn.jsdelivr.net/npm/lit-html@3/+esm";
+import { unsafeHTML } from "https://cdn.jsdelivr.net/npm/lit-html@3/directives/unsafe-html.js";
 import { asyncLLM } from "https://cdn.jsdelivr.net/npm/asyncllm@2";
 import { parse } from "https://cdn.jsdelivr.net/npm/partial-json@0.1.7/+esm";
+import { Marked } from "https://cdn.jsdelivr.net/npm/marked@13/+esm";
 
 const { token } = await fetch("https://llmfoundry.straive.com/token", { credentials: "include" }).then((res) =>
   res.json()
@@ -14,16 +16,23 @@ render(
   document.querySelector("#analyze")
 );
 
-new bootstrap.Tooltip("body", { selector: '[data-bs-toggle="tooltip"]' });
-
 const $results = document.querySelector("#results");
 const $transcriptForm = document.querySelector("#transcript-form");
 const $systemPrompt = document.querySelector("#system-prompt");
 const $terms = document.querySelector("#terms");
 const $transcript = document.querySelector("#transcript");
+
+const marked = new Marked();
 let terms = getTerms();
 let results = await fetch("transcripts.json").then((r) => r.json());
-results.forEach(({transcript, answers }) => {answers.forEach((answer) => {answer.timestamp = Math.random() * 1000;});});
+
+// If a timestamp is not provided, generate a random one
+results.forEach(({ transcript, answers }) => {
+  answers.forEach((answer) => {
+    answer.timestamp = answer.timestamp || Math.random() * 100;
+  });
+});
+
 $transcriptForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   terms = getTerms();
@@ -64,20 +73,14 @@ $transcriptForm.addEventListener("submit", async (event) => {
   renderResults(results);
 });
 
-function initializeTooltips() {
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-    new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-}
-
 function renderResults(results) {
   render(
     html`
-      <table class="table">
+      <table class="table cursor-pointer">
         <thead>
           <tr>
             <th>Invoice No.</th>
+            <th>Transcript</th>
             ${terms.map((term) => html`<th>${term}</th>`)}
           </tr>
         </thead>
@@ -85,7 +88,8 @@ function renderResults(results) {
           ${results.map(
             (row, index) => html`
               <tr data-index="${index}">
-                <td class="no-overflow" data-bs-toggle="tooltip" title="${row.transcript}">${row.invoice_no}</td>
+                <td>${row.invoice_no}</td>
+                <td class="no-overflow">${row.transcript.slice(0, 200)}</td>
                 ${row.error
                   ? html`<td class="text-danger" colspan="${terms.length}">${row.error}</td>`
                   : row.answers.map((answer) => html`<td>${answer.answer ? "✅" : "❌"}</td>`)}
@@ -97,9 +101,6 @@ function renderResults(results) {
     `,
     $results
   );
-
-  // Initialize Bootstrap tooltips
-  initializeTooltips();
 }
 
 let currentIndex = -1;
@@ -115,6 +116,7 @@ function showAnswersModal(index) {
   document.querySelector(`tr[data-index="${index}"]`).classList.add("table-active");
 
   const modal = bootstrap.Modal.getInstance("#snippet-modal") || new bootstrap.Modal("#snippet-modal");
+  render(html`${results[index].invoice_no}`, document.querySelector("#snippet-modal-title"));
   render(
     html`
       <table class="table">
@@ -134,26 +136,23 @@ function showAnswersModal(index) {
                 <td>${answer ? "✅" : "❌"}</td>
                 <td>${reasoning}</td>
                 <td>
-                <div>${transcript}</div>
-                <small class="text-muted" data-bs-toggle="tooltip" title="Transcript: ${transcript}, Timestamp: ${timestamp}">${timestamp}</small>
+                  <div>${unsafeHTML(marked.parse(transcript))}</div>
+                  <small class="text-muted">${timestamp.toFixed(1)}s</small>
                 </td>
               </tr>
             `
           )}
         </tbody>
       </table>
-      <div>
-        <h4>Full Transcript</h4>
-        <p>${transcript}</p>
-      </div>
+      <section>
+        <h1 class="h4 my-5">Transcript</h1>
+        ${unsafeHTML(marked.parse(transcript))}
+      </section>
     `,
     document.querySelector("#snippet-modal-body")
   );
 
   modal.show();
-
-  // Initialize Bootstrap tooltips
-  initializeTooltips();
 }
 
 $results.addEventListener("click", (event) => {
