@@ -80,7 +80,6 @@ function renderResults(results) {
         <thead>
           <tr>
             <th>Invoice No.</th>
-            <th>Transcript</th>
             ${terms.map((term) => html`<th>${term}</th>`)}
           </tr>
         </thead>
@@ -89,10 +88,14 @@ function renderResults(results) {
             (row, index) => html`
               <tr data-index="${index}">
                 <td>${row.invoice_no}</td>
-                <td class="no-overflow">${row.transcript.slice(0, 200)}</td>
                 ${row.error
                   ? html`<td class="text-danger" colspan="${terms.length}">${row.error}</td>`
-                  : row.answers.map((answer) => html`<td>${answer.answer ? "✅" : "❌"}</td>`)}
+                  : [
+                      html`<td>${row.answers.find(answer => answer.question === "Was the debtor willing to pay?") ? (row.answers.find(answer => answer.question === "Was the debtor willing to pay?").answer ? "High" : "Low") : "N/A"}</td>`,
+                      ...row.answers.filter(answer => answer.question !== "Was the debtor willing to pay?").map((answer) =>
+                        html`<td>${answer.answer ? "✅" : "❌"}</td>`
+                      )
+                    ]}
               </tr>
             `
           )}
@@ -129,7 +132,11 @@ function showAnswersModal(index) {
           </tr>
         </thead>
         <tbody>
-          ${answers.map(
+          ${[
+            // Move "Willing to pay" answer to the first position
+            answers.find(({ question }) => question === "Was the debtor willing to pay?"),
+            ...answers.filter(({ question }) => question !== "Was the debtor willing to pay?")
+          ].map(
             ({ question, answer, reasoning, transcript, timestamp }) => html`
               <tr>
                 <td>${question}</td>
