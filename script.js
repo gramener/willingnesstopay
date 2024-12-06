@@ -24,7 +24,7 @@ const $transcript = document.querySelector("#transcript");
 
 const marked = new Marked();
 let terms = getTerms();
-let results = await fetch("transcripts_modified1.json").then((r) => r.json());
+let results = await fetch("transcripts.json").then((r) => r.json());
 // If a timestamp is not provided, generate a random one
 results.forEach(({ transcript, answers }) => {
   answers.forEach((answer) => {
