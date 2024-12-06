@@ -24,8 +24,7 @@ const $transcript = document.querySelector("#transcript");
 
 const marked = new Marked();
 let terms = getTerms();
-let results = await fetch("transcripts.json").then((r) => r.json());
-
+let results = await fetch("transcripts_modified1.json").then((r) => r.json());
 // If a timestamp is not provided, generate a random one
 results.forEach(({ transcript, answers }) => {
   answers.forEach((answer) => {
@@ -80,7 +79,6 @@ function renderResults(results) {
         <thead>
           <tr>
             <th>Invoice No.</th>
-            <th>Transcript</th>
             ${terms.map((term) => html`<th>${term}</th>`)}
           </tr>
         </thead>
@@ -89,10 +87,15 @@ function renderResults(results) {
             (row, index) => html`
               <tr data-index="${index}">
                 <td>${row.invoice_no}</td>
-                <td class="no-overflow">${row.transcript.slice(0, 200)}</td>
                 ${row.error
                   ? html`<td class="text-danger" colspan="${terms.length}">${row.error}</td>`
-                  : row.answers.map((answer) => html`<td>${answer.answer ? "✅" : "❌"}</td>`)}
+                  : row.answers.map((answer) => html`
+                      <td>
+                        ${typeof answer.answer === "boolean"
+                          ? (answer.answer ? "✅" : "❌")
+                          : answer.answer}
+                      </td>
+                    `)}
               </tr>
             `
           )}
@@ -133,7 +136,11 @@ function showAnswersModal(index) {
             ({ question, answer, reasoning, transcript, timestamp }) => html`
               <tr>
                 <td>${question}</td>
-                <td>${answer ? "✅" : "❌"}</td>
+                <td>
+                  ${typeof answer === "boolean"
+                    ? (answer ? "✅" : "❌")
+                    : answer}
+                </td>
                 <td>${reasoning}</td>
                 <td>
                   <div>${unsafeHTML(marked.parse(transcript))}</div>
