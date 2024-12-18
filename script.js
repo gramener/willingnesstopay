@@ -72,54 +72,25 @@ $transcriptForm.addEventListener("submit", async (event) => {
   renderResults(results);
 });
 
-function renderResults(results) {
-  render(
-    html`
-      <table class="table cursor-pointer">
-        <thead>
-          <tr>
-            <th>Invoice No.</th>
-            ${terms.map((term) => html`<th>${term}</th>`)}
-          </tr>
-        </thead>
-        <tbody>
-          ${results.map(
-            (row, index) => html`
-              <tr data-index="${index}">
-                <td>${row.invoice_no}</td>
-                ${row.error
-                  ? html`<td class="text-danger" colspan="${terms.length}">${row.error}</td>`
-                  : row.answers.map((answer) => html`
-                      <td>
-                        ${typeof answer.answer === "boolean"
-                          ? (answer.answer ? "✅" : "❌")
-                          : answer.answer}
-                      </td>
-                    `)}
-              </tr>
-            `
-          )}
-        </tbody>
-      </table>
-    `,
-    $results
-  );
-}
-
 let currentIndex = -1;
-
-function showAnswersModal(index) {
-  if (index < 0 || index >= results.length) return;
-
-  currentIndex = index;
-  const { answers, transcript } = results[index];
-
-  // Remove previous highlights and highlight current row
-  document.querySelectorAll("tr.table-active").forEach((row) => row.classList.remove("table-active"));
-  document.querySelector(`tr[data-index="${index}"]`).classList.add("table-active");
-
-  const modal = bootstrap.Modal.getInstance("#snippet-modal") || new bootstrap.Modal("#snippet-modal");
-  render(html`${results[index].invoice_no}`, document.querySelector("#snippet-modal-title"));
+// Make the function globally accessible
+window.showAnswersModal = function (rowIndex, colIndex) {
+  if (rowIndex < 0 || rowIndex >= results.length) return;
+  currentIndex = rowIndex;
+  const { answers, transcript, invoice_no } = results[rowIndex];
+  // Remove previous highlights and highlight the current row
+  document
+    .querySelectorAll("tr.table-active")
+    .forEach((row) => row.classList.remove("table-active"));
+  document
+    .querySelector(`tr[data-row-index="${rowIndex}"]`)
+    .classList.add("table-active");
+  // Get the specific answer related to the clicked cell
+  const specificAnswer = answers[colIndex];
+  const modal =
+    bootstrap.Modal.getInstance("#snippet-modal") || new bootstrap.Modal("#snippet-modal");
+  // Render the modal content with specific data
+  render(html`${invoice_no}`, document.querySelector("#snippet-modal-title"));
   render(
     html`
       <table class="table">
@@ -132,23 +103,21 @@ function showAnswersModal(index) {
           </tr>
         </thead>
         <tbody>
-          ${answers.map(
-            ({ question, answer, reasoning, transcript, timestamp }) => html`
-              <tr>
-                <td>${question}</td>
-                <td>
-                  ${typeof answer === "boolean"
-                    ? (answer ? "✅" : "❌")
-                    : answer}
-                </td>
-                <td>${reasoning}</td>
-                <td>
-                  <div>${unsafeHTML(marked.parse(transcript))}</div>
-                  <small class="text-muted">${timestamp.toFixed(1)}s</small>
-                </td>
-              </tr>
-            `
-          )}
+          <tr>
+            <td>${specificAnswer.question}</td>
+            <td>
+              ${typeof specificAnswer.answer === "boolean"
+                ? specificAnswer.answer
+                  ? "✅"
+                  : "❌"
+                : specificAnswer.answer}
+            </td>
+            <td>${specificAnswer.reasoning}</td>
+            <td>
+              <div>${unsafeHTML(marked.parse(specificAnswer.transcript))}</div>
+              <small class="text-muted">${specificAnswer.timestamp.toFixed(1)}s</small>
+            </td>
+          </tr>
         </tbody>
       </table>
       <section>
@@ -158,14 +127,57 @@ function showAnswersModal(index) {
     `,
     document.querySelector("#snippet-modal-body")
   );
-
   modal.show();
-}
+};
 
-$results.addEventListener("click", (event) => {
-  const $row = event.target.closest("tr");
-  if (!$row?.dataset.index) return;
-  showAnswersModal(+$row.dataset.index);
+function renderResults(results) {
+  render(
+    html`
+      <table class="table cursor-pointer">
+        <thead>
+          <tr>
+            <th>Invoice No.</th>
+            ${terms.map((term) => html`<th>${term}</th>`)}
+          </tr>
+        </thead>
+        <tbody>
+          ${results.map(
+            (row, rowIndex) => html`
+              <tr data-row-index="${rowIndex}">
+                <td>${row.invoice_no}</td>
+                ${row.error
+                  ? html`<td class="text-danger" colspan="${terms.length}">${row.error}</td>`
+                  : row.answers.map(
+                      (answer, colIndex) => html`
+                        <td
+                          data-row-index="${rowIndex}"
+                          data-col-index="${colIndex}"
+                        >
+                          ${typeof answer.answer === "boolean"
+                            ? answer.answer
+                              ? "✅"
+                              : "❌"
+                            : answer.answer}
+                        </td>
+                      `
+                    )}
+              </tr>
+            `
+          )}
+        </tbody>
+      </table>
+    `,
+    $results
+  );
+}
+document.querySelector("#results").addEventListener("click", (event) => {
+  const cell = event.target.closest("td");
+  if (!cell || !cell.hasAttribute("data-row-index") || !cell.hasAttribute("data-col-index")) {
+    return;
+  }
+  const rowIndex = parseInt(cell.getAttribute("data-row-index"), 10);
+  const colIndex = parseInt(cell.getAttribute("data-col-index"), 10);
+  showAnswersModal(rowIndex, colIndex);
 });
 
 // Handle keyboard navigation
