@@ -72,11 +72,13 @@ $transcriptForm.addEventListener("submit", async (event) => {
   renderResults(results);
 });
 
-let currentIndex = -1;
+let currentIndex = -1;  // Row index
+let currentColIndex = -1;  // Column index
 // Make the function globally accessible
 window.showAnswersModal = function (rowIndex, colIndex) {
-  if (rowIndex < 0 || rowIndex >= results.length) return;
+  if (rowIndex < 0 || rowIndex >= results.length || colIndex < 0) return;
   currentIndex = rowIndex;
+  currentColIndex = colIndex;  // Remember the clicked column index
   const { answers, transcript, invoice_no } = results[rowIndex];
   // Remove previous highlights and highlight the current row
   document
@@ -120,10 +122,6 @@ window.showAnswersModal = function (rowIndex, colIndex) {
           </tr>
         </tbody>
       </table>
-      <section>
-        <h1 class="h4 my-5">Transcript</h1>
-        ${unsafeHTML(marked.parse(transcript))}
-      </section>
     `,
     document.querySelector("#snippet-modal-body")
   );
@@ -186,10 +184,28 @@ document.addEventListener("keydown", (event) => {
 
   switch (event.key) {
     case "ArrowUp":
-      showAnswersModal(currentIndex - 1);
+      if (currentIndex > 0) {
+        currentIndex--;
+        showAnswersModal(currentIndex, currentColIndex);  // Use the remembered column index
+      }
       break;
     case "ArrowDown":
-      showAnswersModal(currentIndex + 1);
+      if (currentIndex < results.length - 1) {
+        currentIndex++;
+        showAnswersModal(currentIndex, currentColIndex);  // Use the remembered column index
+      }
+      break;
+    case "ArrowLeft":
+      if (currentColIndex > 0) {
+        currentColIndex--;
+        showAnswersModal(currentIndex, currentColIndex);  // Move to previous column
+      }
+      break;
+    case "ArrowRight":
+      if (currentColIndex < terms.length - 1) {  // Assuming `terms.length` is the number of columns
+        currentColIndex++;
+        showAnswersModal(currentIndex, currentColIndex);  // Move to next column
+      }
       break;
   }
 });
