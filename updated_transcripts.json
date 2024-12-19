@@ -7,7 +7,7 @@
             {
               "question": "Was the debtor willing to pay?",
               "reasoning": "The debtor expressed willingness to pay by acknowledging the debt and discussing payment terms.",
-              "answer": true,
+              "answer": "High",
               "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
             },
             {
@@ -49,7 +49,7 @@
               {
                 "question": "Was the debtor willing to pay?",
                 "reasoning": "The debtor stated that the invoice was being paid as they spoke. This indicates a high willingness to pay.",
-                "answer": true,
+                "answer": "High",
                 "transcript": "Debtor: Yeah, it's being paid as we speak."
               },
               {
@@ -91,7 +91,7 @@
                 {
                     "question": "Was the debtor willing to pay?",
                     "reasoning": "The debtor stated, 'I will check that. I will make sure it's paid as soon as possible.' This indicates a willingness to pay.",
-                    "answer": true,
+                    "answer": "High",
                     "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
                 },
                 {
@@ -133,7 +133,7 @@
               {
                 "question": "Was the debtor willing to pay?",
                 "reasoning": "The debtor stated that they objected to the charges before the work was published and mentioned they did not have the money to pay. This suggests they were unwilling to pay.",
-                "answer": false,
+                "answer": "Low",
                 "transcript": "Debtor: I objected to the charges... I don't want to publish because I don't have this money."
               },
               {
@@ -165,6 +165,48 @@
                 "reasoning": "No, the debtor did not make any specific requests regarding payment or offer any compromises.",
                 "answer": false,
                 "transcript": ""
+              }
+            ]
+          },
+          {
+            "invoice_no": "NK3XLRDPQ1",
+            "transcript": "Here's a transcription of the conversation, anonymizing identifying information as requested.  Note that because the audio quality is poor in places, some words may be slightly uncertain.\n\n**Agent:** Accounts Payable Front Desk\n\n**Debtor:**  [Name Redacted] from [Company Name Redacted]\n\n\n**Conversation:**\n\n**Agent:** Thank you for calling. Accounts Payable front desk. Please hold for the next available agent.  (Hold music) Accounts Payable this is [Agent's Name Redacted]\n\n**Debtor:** Hi, good day. This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices.\n\n**Agent:** Sorry, can you repeat what you first said?\n\n**Debtor:** This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices.\n\n**",
+            "answers": [
+              {
+                "question": "Was the debtor willing to pay?",
+                "reasoning": "The debtor's inquiry about sending invoices suggests they are looking to make payments or process payments; however, there is no explicit statement indicating their willingness to pay at this stage.",
+                "answer": "Low",
+                "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
+              },
+              {
+                "question": "Is the risk of the payment default high?",
+                "reasoning": "Since the debtor has not confirmed acceptance of the invoice or a willingness to pay, and there is no commitment made, the risk of payment default could be assessed as high based on the available information.",
+                "answer": true,
+                "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
+              },
+              {
+                "question": "Did the agent reach the right point-of-contact?",
+                "reasoning": "The agent answered the call at the Accounts Payable front desk and spoke to a person explicitly identifying themselves as a representative of a company, suggesting that this is the correct point-of-contact for invoice-related matters.",
+                "answer": true,
+                "transcript": "**Agent:** Thank you for calling. Accounts Payable front desk. Please hold for the next available agent.  (Hold music) Accounts Payable this is [Agent's Name Redacted]**Debtor:** Hi, good day. This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices."
+              },
+              {
+                "question": "Did the debtor accept that the invoice was due?",
+                "reasoning": "The debtor did not explicitly state that an invoice was due during this exchange; they only inquired about the process for sending invoices, which does not indicate acceptance of any due invoice.",
+                "answer": false,
+                "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
+              },
+              {
+                "question": "Was there a promise to pay by the debtor?",
+                "reasoning": "No promise to pay was made by the debtor. They only requested contact details for sending invoices, which does not constitute a promise to pay.",
+                "answer": false,
+                "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
+              },
+              {
+                "question": "Did the debtor make any specific requirement to help them pay?",
+                "reasoning": "The only requirement stated by the debtor was to obtain an email address for sending invoices, which does not specifically help them pay but rather facilitates the billing process.",
+                "answer": true,
+                "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
               }
             ]
           }
