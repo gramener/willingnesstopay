@@ -1,0 +1,173 @@
+
+[
+    {
+          "invoice_no": "1452741260",
+          "transcript": "Agent: Ryan from [Company Name]\n\nDebtor: [Debtor Name]\n\n\nConversation:\n\nAgent: Hi there. This is Ryan from [Company Name]. I'm speaking with [Debtor Name]?\n\nDebtor: Uh, yes.\n\nAgent: Uh, I'm calling about your open access publication, uh, [Publication Title]. Your invoice number is 1452741260, amounting $6,700. Uh, could you please let me know when we expect to pay this invoice? This will help us avoid sending you a reminder.\n\nDebtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible.\n\nAgent: Uh, may Can you please confirm if the if your email address is correct here on our system? d e n g h @ [University Email Domain]?\n\nDebtor: Uh, yes.\n\nAgent: Okay. Uh, I will send you an email regarding this invoice. Uh, can you please reply about the the date so we can uh update your uh make take a note of our system, so you won't receive an email regarding this invoice. Is that all right with you?\n\nDebtor: Uh, sure.\n\nAgent: Okay. Thank you for answering our call. Have a great day. Bye.\n\nDebtor: Bye.",
+          "answers": [
+            {
+              "question": "Was the debtor willing to pay?",
+              "reasoning": "The debtor expressed willingness to pay by acknowledging the debt and discussing payment terms.",
+              "answer": true,
+              "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
+            },
+            {
+              "question": "Is the risk of the payment default high?",
+              "reasoning": "The debtor acknowledged the debt and showed intent to pay, reducing the risk of default.",
+              "answer": false,
+              "transcript": "Debtor: I'll make sure it's paid as soon as possible."
+            },
+            {
+              "question": "Did the agent reach the right point-of-contact?",
+              "reasoning": "The debtor acknowledged the debt and discussed payment terms, indicating the agent reached the correct person.",
+              "answer": true,
+              "transcript": "Debtor: Uh, yes. I understand the invoice is due."
+            },
+            {
+              "question": "Did the debtor accept that the invoice was due?",
+              "reasoning": "The debtor explicitly acknowledged that the invoice was due.",
+              "answer": true,
+              "transcript": "Debtor: Yes, I understand the invoice is due."
+            },
+            {
+              "question": "Was there a promise to pay by the debtor?",
+              "reasoning": "The debtor stated they would arrange the payment, which is a promise to pay.",
+              "answer": true,
+              "transcript": "Debtor: I will arrange the payment as soon as possible."
+            },
+            {
+              "question": "Did the debtor make any specific requirement to help them pay?",
+              "reasoning": "The transcript does not indicate any specific requirements made by the debtor to facilitate payment.",
+              "answer": false,
+              "transcript": "Debtor: I will arrange the payment as soon as possible."
+            }
+          ]
+        },
+        {
+            "invoice_no": "N9HF9V0AFE",
+            "transcript": "**Agent:** A debt collection agent from an unnamed publishing group.\n\n**Debtor:** Radmir Derda\n\n**Transcribed and Anonymized Conversation:**\n\n\nAgent: Hi, this is [Agent Name] calling from [Company Name]. Am I speaking with Radmir Derda?\n\nDebtor: Speaking.\n\nAgent: Hi, yes, hello. I'm calling in regards with the open invoice. It is 1452515842.\n\nDebtor: Mhm.\n\nAgent: Are you aware with the invoice? Because we already sent you several\n\nDebtor: Yeah, it's being paid as we speak.\n\nAgent: Oh, for that one, can you please send us a proof of payment regarding with the\n\nDebtor: Yeah, I sent it to my payment department. They'll be in touch shortly.\n\nAgent: Okay, for this one, can you please reconfirm your email address?\n\nDebtor: It is [Radmir's email address]\n\nAgent: Okay. Thank you very much for answering the call. Goodbye.\n\nDebtor: Goodbye.\n\nAgent: Good.",
+            "answers": [
+              {
+                "question": "Was the debtor willing to pay?",
+                "reasoning": "The debtor stated that the invoice was being paid as they spoke. This indicates a high willingness to pay.",
+                "answer": true,
+                "transcript": "Debtor: Yeah, it's being paid as we speak."
+              },
+              {
+                "question": "Is the risk of the payment default high?",
+                "reasoning": "The debtor stated that the invoice was being paid as they spoke and will send proof of payment. This indicates a low risk of payment default.",
+                "answer": false,
+                "transcript": "Debtor: Yeah, it's being paid as we speak.\n\nYeah, I'll send it to my payment department, they'll be in touch shortly.\\n"
+              },
+              {
+                "question": "Did the agent reach the right point-of-contact?",
+                "reasoning": "The agent asked to speak to Radmir Duda and the person on the call confirmed they were Radmir Duda, indicating they reached the correct contact.",
+                "answer": true,
+                "transcript": "Agent: Hi, this is [Agent Name] calling from [Company Name]. Am I speaking with Radmir Derda? Debtor: Speaking."
+              },
+              {
+                "question": "Did the debtor accept that the invoice was due?",
+                "reasoning": "The debtor stated that the invoice was being paid as they spoke, implying they acknowledge the invoice was due.",
+                "answer": true,
+                "transcript": "Debtor: Yeah, it's being paid as we speak."
+              },
+              {
+                "question": "Was there a promise to pay by the debtor?",
+                "reasoning": "The debtor stated that the invoice was being paid as they spoke, indicating a promise to pay.",
+                "answer": true,
+                "transcript": "Debtor: Yeah, it's being paid as we speak."
+              },
+              {
+                "question": "Did the debtor make any specific requirement to help them pay?",
+                "reasoning": "The debtor did not make any specific requests to help them pay. They just mentioned that they were paying as they spoke.",
+                "answer": false,
+                "transcript": "Agent: Oh, for that one, can you please send us a proof of payment regarding with the"
+              }
+            ]
+          },
+          {
+            "invoice_no": "1452741260",
+            "transcript": "**Agent:** Ryan from [Company Name]\n\n**Debtor:** [Debtor Name]\n\n**Transcribed and Anonymized Conversation:**\n\nAgent: Hi there. This is Ryan from [Company Name]. I'm speaking with [Debtor Name]?\n\nDebtor: Uh, yes.\n\nAgent: Uh, I'm calling about your open access publication, uh, [Publication Title]. Your invoice number is 1452741260, amounting $6,700. Uh, could you please let me know when we expect to pay this invoice? This will help us avoid sending you a reminder.\n\nDebtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible.\n\nAgent: Uh, may Can you please confirm if the if your email address is correct here on our system? d e n g h @ [University Email Domain]?\n\nDebtor: Uh, yes.\n\nAgent: Okay. Uh, I will send you an email regarding this invoice. Uh, can you please reply about the the date so we can uh update your uh make take a note of our system, so you won't receive an email regarding this invoice. Is that all right with you?\n\nDebtor: Uh, sure.\n\nAgent: Okay. Thank you for answering our call. Have a great day. Bye.\n\nDebtor: Bye.",
+            "answers": [
+                {
+                    "question": "Was the debtor willing to pay?",
+                    "reasoning": "The debtor stated, 'I will check that. I will make sure it's paid as soon as possible.' This indicates a willingness to pay.",
+                    "answer": true,
+                    "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
+                },
+                {
+                    "question": "Is the risk of the payment default high?",
+                    "reasoning": "The debtor has indicated they will check the invoice and make sure it is paid as soon as possible. No indication of inability to pay was made. Therefore, the payment default risk is low.",
+                    "answer": false,
+                    "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
+                },
+                {
+                    "question": "Did the agent reach the right point-of-contact?",
+                    "reasoning": "The agent asked, 'Am I speaking with Huydeng?' and the debtor answered, 'Uh yes.' This indicates that the agent reached the correct point of contact.",
+                    "answer": true,
+                    "transcript": "Agent: Am I speaking with Huydeng? Debtor: Uh yes."
+                },
+                {
+                    "question": "Did the debtor accept that the invoice was due?",
+                    "reasoning": "The debtor did not deny the invoice nor did they claim it was incorrect. They stated they will check it and make sure it is paid.",
+                    "answer": true,
+                    "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
+                },
+                {
+                    "question": "Was there a promise to pay by the debtor?",
+                    "reasoning": "The debtor stated, 'I will check that. I will make sure it's paid as soon as possible.' This constitutes a promise to pay.",
+                    "answer": true,
+                    "transcript": "Debtor: Oh, okay. Okay. I will check that. I'll make sure it's paid as soon as possible."
+                },
+                {
+                    "question": "Did the debtor make any specific requirement to help them pay?",
+                    "reasoning": "The debtor made no specific requirements in order to pay the debt.",
+                    "answer": false,
+                    "transcript": ""
+                }
+            ]
+        },
+        {
+            "invoice_no": "1452289259",
+            "transcript": "**Agent:** Nila from Springer Nature\n\n**Debtor:** James Abban\n\n**Transcribed and Anonymized Conversation:**\n\nAgent: Hello, this is Nila from Springer Nature. Am I speaking with James Abban?\n\nDebtor: Yes.\n\nAgent: I'm calling in regards to your open invoice that hasn't been paid yet.\n\nDebtor: Oh, which one?\n\nAgent: The invoice number is 1452289259. Could you confirm your email address for us?\n\nDebtor: Okay, but before you guys published the work, I had spoken with one of your staff because I'm a student and I didn't have the money. I objected to the charges and didn't want the work to be published.\n\nAgent: I understand, but I see that you owe for this invoice.\n\nDebtor: I don't think I owe anything. I objected before the publication, and one of your staff said they would waive the charges. I still have the emails.\n\nAgent: I see. I'll forward the email so we can resolve this.\n\nDebtor: Okay. I'm going to forward those emails to you.\n\nAgent: Thank you for your time. We'll take a look at the emails and get back to you.\n\nDebtor: Alright, thank you.\n\nAgent: Goodbye.\n\nDebtor: Goodbye.",
+            "answers": [
+              {
+                "question": "Was the debtor willing to pay?",
+                "reasoning": "The debtor stated that they objected to the charges before the work was published and mentioned they did not have the money to pay. This suggests they were unwilling to pay.",
+                "answer": false,
+                "transcript": "Debtor: I objected to the charges... I don't want to publish because I don't have this money."
+              },
+              {
+                "question": "Is the risk of the payment default high?",
+                "reasoning": "The debtor explicitly stated they were unwilling to pay, and they disputed the charge, indicating a high risk of payment default.",
+                "answer": true,
+                "transcript": "Debtor: I don't think I owe anything. I objected before the publication."
+              },
+              {
+                "question": "Did the agent reach the right point-of-contact?",
+                "reasoning": "The agent confirmed they were speaking with James Abban, which indicates the correct point-of-contact was reached.",
+                "answer": true,
+                "transcript": "Agent: Am I speaking with James Abban? Debtor: Yes."
+              },
+              {
+                "question": "Did the debtor accept that the invoice was due?",
+                "reasoning": "No, the debtor disputed the invoice and stated they had objected to the charges before the work was published, indicating they did not accept the invoice as due.",
+                "answer": false,
+                "transcript": "Debtor: I don't think I owe anything. I objected before the publication."
+              },
+              {
+                "question": "Was there a promise to pay by the debtor?",
+                "reasoning": "The debtor did not promise to pay, and instead, they disputed the charges and claimed they were not liable for them.",
+                "answer": false,
+                "transcript": "Debtor: I don't want to publish because I don't have this money."
+              },
+              {
+                "question": "Did the debtor make any specific requirement to help them pay?",
+                "reasoning": "No, the debtor did not make any specific requests regarding payment or offer any compromises.",
+                "answer": false,
+                "transcript": ""
+              }
+            ]
+          }
+]
+
+
