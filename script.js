@@ -24,7 +24,7 @@ const $transcript = document.querySelector("#transcript");
 
 const marked = new Marked();
 let terms = getTerms();
-let results = await fetch("transcripts.json").then((r) => r.json());
+let results = await fetch("updated_transcripts.json").then((r) => r.json());
 // If a timestamp is not provided, generate a random one
 results.forEach(({ transcript, answers }) => {
   answers.forEach((answer) => {
@@ -74,7 +74,24 @@ $transcriptForm.addEventListener("submit", async (event) => {
 
 let currentIndex = -1;  // Row index
 let currentColIndex = -1;  // Column index
-// Make the function globally accessible
+window.showTranscript = function (rowIndex) {
+  if (rowIndex < 0 || rowIndex >= results.length) return;
+  const { transcript, invoice_no } = results[rowIndex];
+  render(html`${invoice_no}`, document.querySelector("#snippet-modal-title"));
+  render(
+    html`
+      <section>
+        <h1 class="h4 my-5">Transcript</h1>
+        ${unsafeHTML(marked.parse(transcript))}
+      </section>
+    `,
+    document.querySelector("#snippet-modal-body")
+  );
+  const modal =
+    bootstrap.Modal.getInstance("#snippet-modal") || new bootstrap.Modal("#snippet-modal");
+  modal.show();
+};
+// Function to show the answers modal
 window.showAnswersModal = function (rowIndex, colIndex) {
   if (rowIndex < 0 || rowIndex >= results.length || colIndex < 0) return;
   currentIndex = rowIndex;
@@ -87,8 +104,10 @@ window.showAnswersModal = function (rowIndex, colIndex) {
   document
     .querySelector(`tr[data-row-index="${rowIndex}"]`)
     .classList.add("table-active");
+
   // Get the specific answer related to the clicked cell
   const specificAnswer = answers[colIndex];
+
   const modal =
     bootstrap.Modal.getInstance("#snippet-modal") || new bootstrap.Modal("#snippet-modal");
   // Render the modal content with specific data
@@ -142,7 +161,12 @@ function renderResults(results) {
           ${results.map(
             (row, rowIndex) => html`
               <tr data-row-index="${rowIndex}">
-                <td>${row.invoice_no}</td>
+                <td
+                  data-row-index="${rowIndex}"
+                  data-col-index="-1"
+                >
+                  ${row.invoice_no}
+                </td>
                 ${row.error
                   ? html`<td class="text-danger" colspan="${terms.length}">${row.error}</td>`
                   : row.answers.map(
@@ -150,6 +174,7 @@ function renderResults(results) {
                         <td
                           data-row-index="${rowIndex}"
                           data-col-index="${colIndex}"
+                          onclick="showAnswersModal(${rowIndex}, ${colIndex})"
                         >
                           ${typeof answer.answer === "boolean"
                             ? answer.answer
@@ -170,12 +195,19 @@ function renderResults(results) {
 }
 document.querySelector("#results").addEventListener("click", (event) => {
   const cell = event.target.closest("td");
-  if (!cell || !cell.hasAttribute("data-row-index") || !cell.hasAttribute("data-col-index")) {
+  if (!cell) {
     return;
   }
+
   const rowIndex = parseInt(cell.getAttribute("data-row-index"), 10);
   const colIndex = parseInt(cell.getAttribute("data-col-index"), 10);
-  showAnswersModal(rowIndex, colIndex);
+
+  // If the clicked cell is for the Invoice No., show the full transcript
+  if (colIndex === -1) {
+    showTranscript(rowIndex);  // Show full transcript for the clicked invoice number
+  } else {
+    showAnswersModal(rowIndex, colIndex);  // Show the specific answer modal
+  }
 });
 
 // Handle keyboard navigation
