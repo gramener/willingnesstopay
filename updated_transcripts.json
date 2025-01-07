@@ -168,48 +168,6 @@
     ]
   },
   {
-    "invoice_no": "NK3XLRDPQ1",
-    "transcript": "Here's a transcription of the conversation, anonymizing identifying information as requested.  Note that because the audio quality is poor in places, some words may be slightly uncertain.\n\n**Agent:** Accounts Payable Front Desk\n\n**Debtor:**  [Name Redacted] from [Company Name Redacted]\n\n\n**Conversation:**\n\n**Agent:** Thank you for calling. Accounts Payable front desk. Please hold for the next available agent.  (Hold music) Accounts Payable this is [Agent's Name Redacted]\n\n**Debtor:** Hi, good day. This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices.\n\n**Agent:** Sorry, can you repeat what you first said?\n\n**Debtor:** This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices.\n\n**",
-    "answers": [
-      {
-        "question": "Was the debtor willing to pay?",
-        "reasoning": "The debtor's inquiry about sending invoices suggests they are looking to make payments or process payments; however, there is no explicit statement indicating their willingness to pay at this stage.",
-        "answer": "Low",
-        "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
-      },
-      {
-        "question": "Is the risk of the payment default high?",
-        "reasoning": "Since the debtor has not confirmed acceptance of the invoice or a willingness to pay, and there is no commitment made, the risk of payment default could be assessed as high based on the available information.",
-        "answer": true,
-        "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
-      },
-      {
-        "question": "Did the agent reach the right point-of-contact?",
-        "reasoning": "The agent answered the call at the Accounts Payable front desk and spoke to a person explicitly identifying themselves as a representative of a company, suggesting that this is the correct point-of-contact for invoice-related matters.",
-        "answer": true,
-        "transcript": "**Agent:** Thank you for calling. Accounts Payable front desk. Please hold for the next available agent.  (Hold music) Accounts Payable this is [Agent's Name Redacted]**Debtor:** Hi, good day. This is [Name Redacted] from [Company Name Redacted]. I'm looking for an email address where we can send the invoices."
-      },
-      {
-        "question": "Did the debtor accept that the invoice was due?",
-        "reasoning": "The debtor did not explicitly state that an invoice was due during this exchange; they only inquired about the process for sending invoices, which does not indicate acceptance of any due invoice.",
-        "answer": false,
-        "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
-      },
-      {
-        "question": "Was there a promise to pay by the debtor?",
-        "reasoning": "No promise to pay was made by the debtor. They only requested contact details for sending invoices, which does not constitute a promise to pay.",
-        "answer": false,
-        "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
-      },
-      {
-        "question": "Did the debtor make any specific requirement to help them pay?",
-        "reasoning": "The only requirement stated by the debtor was to obtain an email address for sending invoices, which does not specifically help them pay but rather facilitates the billing process.",
-        "answer": true,
-        "transcript": "**Debtor:** I'm looking for an email address where we can send the invoices."
-      }
-    ]
-  },
-  {
     "invoice_no": "LIUEN9M14U",
     "transcript": "Agent:  Representative from Company A\n\nDebtor:  Individual B\n\n\nConversation:\n\nAgent: Hello.\n\nDebtor: Hello.  Hi, good day. This is Kim from Spring Nature. Am I speaking with [Professor Name]?\n\nAgent: Yes.\n\nDebtor: Yes.  Um, I'm actually calling regarding your outstanding invoice for my Spring Nature account.  Um, may we have an explanation regarding... actually, the thing is that when it was supposed to be published, there were two people who were funding my paper. So, I have even written them that there is a communication from, um, from this [Company Name], which always mentioned that I have not, you know, um, submitted the kind of fee that was supposed to be charged for this paper.  Again, sir, you mean, uh, there are two people who were supposed to pay for this manuscript, for this invoice?\n\nAgent: Yes, yes, yes.  Actually, it was funded by two people.\n\nDebtor: My paper was funded by two people.\n\nAgent: Therefore, sir, may we have the contact details of this person so that we can directly, um, reach out to them regarding this outstanding invoice?\n\nDebtor: I can just, I can... I don't know the name of these two people, but I can just give you the contact number of a person whom I was, you know, contacting at that time.\n\nAgent: Oh, sure, sure, sure. Um, we can, uh, take note of these contact, uh, numbers that you do have.\n\nDebtor: Yeah, yeah, yeah.  Just give me one minute. I will just, I will give you the contact number.  Just give me one minute only.\n\nAgent: Oh, sure. Thank you.\n\nDebtor: Yeah, just one minute.\n\nAgent: Sure.\n\nDebtor: It's uh, plus nine one. Um, I do have here, uh, nine one.  It's nine nine seven one seven.\n\nAgent: It's uh, wait sir, it's nine one nine nine seven.  No, no, no, it's nine nine seven one seven. Oh, nine nine seven one seven.  Nine two... nine two seven nine zero. Seven nine zero. Okay, add therefore, sir, we will be...  You have to... You have to, you know, add the country code that's plus nine one before dialing this number.\n\nAgent: Oh, nine one. Okay. Uh, I do have here uh, nine nine seven one seven nine two seven nine zero. Is that correct, sir?\n\nDebtor: Yeah, yeah, that's the correct and the name of the person is [Name].  [Name], exactly. I don't know the full name, but something like [Name]. R A S H M I. Oh, it's [Name]. R A S H M I.\n\nAgent: Yes.\n\nDebtor: Uh, sure, sir. Uh, thank you for providing this information. Uh, we will directly, uh, contact him regarding this invoice. Okay, sir?\n\nAgent: Yes, yeah, yeah. You can just you can just directly contact that lady, um, because she was handling this actually at that time when I was, you know, in the process of publishing this paper.\n\nDebtor: Mhm, okay, sir. Thank you for all this information. For taking your time answering our call.  And have a great...\n\nAgent: Okay.\n\nDebtor: Bye.  Thank you, sir.\n\nAgent: Thank you. Bye.",
     "answers": [
