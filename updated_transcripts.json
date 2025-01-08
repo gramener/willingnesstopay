@@ -127,7 +127,7 @@
   },
   {
     "invoice_no": "1452289259",
-    "transcript": "**Agent:** Nila from Springer Nature\n\n**Debtor:** James Abban\n\n**Transcribed and Anonymized Conversation:**\n\nAgent: Hello, this is Nila from Springer Nature. Am I speaking with James Abban?\n\nDebtor: Yes.\n\nAgent: I'm calling in regards to your open invoice that hasn't been paid yet.\n\nDebtor: Oh, which one?\n\nAgent: The invoice number is 1452289259. Could you confirm your email address for us?\n\nDebtor: Okay, but before you guys published the work, I had spoken with one of your staff because I'm a student and I didn't have the money. I objected to the charges and didn't want the work to be published.\n\nAgent: I understand, but I see that you owe for this invoice.\n\nDebtor: I don't think I owe anything. I objected before the publication, and one of your staff said they would waive the charges. I still have the emails.\n\nAgent: I see. I'll forward the email so we can resolve this.\n\nDebtor: Okay. I'm going to forward those emails to you.\n\nAgent: Thank you for your time. We'll take a look at the emails and get back to you.\n\nDebtor: Alright, thank you.\n\nAgent: Goodbye.\n\nDebtor: Goodbye.",
+    "transcript": "**Agent:** Nila from Company A\n\n**Debtor:** James Abban\n\n**Transcribed and Anonymized Conversation:**\n\nAgent: Hello, this is Nila from Company A. Am I speaking with James Abban?\n\nDebtor: Yes.\n\nAgent: I'm calling in regards to your open invoice that hasn't been paid yet.\n\nDebtor: Oh, which one?\n\nAgent: The invoice number is 1452289259. Could you confirm your email address for us?\n\nDebtor: Okay, but before you guys published the work, I had spoken with one of your staff because I'm a student and I didn't have the money. I objected to the charges and didn't want the work to be published.\n\nAgent: I understand, but I see that you owe for this invoice.\n\nDebtor: I don't think I owe anything. I objected before the publication, and one of your staff said they would waive the charges. I still have the emails.\n\nAgent: I see. I'll forward the email so we can resolve this.\n\nDebtor: Okay. I'm going to forward those emails to you.\n\nAgent: Thank you for your time. We'll take a look at the emails and get back to you.\n\nDebtor: Alright, thank you.\n\nAgent: Goodbye.\n\nDebtor: Goodbye.",
     "answers": [
       {
         "question": "Was the debtor willing to pay?",
@@ -175,7 +175,7 @@
         "question": "Was the debtor willing to pay?",
         "reasoning": "The debtor did not directly refuse to pay but explained the situation of funding from two other people.  He provided contact information for one of the funders, indicating a willingness to facilitate payment.",
         "answer": "Medium",
-        "transcript": "[00:00:45]  the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh springer nature which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
+        "transcript": "[00:00:45]  the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh Company A which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
       },
       {
         "question": "Is the risk of the payment default high?",
@@ -187,25 +187,25 @@
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The agent initially contacted the debtor, who was not directly responsible for payment. The debtor then provided contact information for a third party (Rashmi) who was involved in the funding and payment process, suggesting the initial contact was not the ultimate point-of-contact for payment resolution.",
         "answer": false,
-        "transcript": "[00:01:34] Actually the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh springer nature which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
+        "transcript": "[00:01:34] Actually the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh Company A which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
         "reasoning": "The debtor doesn't explicitly deny the invoice but explains that the payment process is managed by others, implying an acknowledgement of the debt's existence.",
         "answer": true,
-        "transcript": "[00:00:35] I'm actually calling regarding your outstanding invoices for your Springer Nature account."
+        "transcript": "[00:00:35] I'm actually calling regarding your outstanding invoices for your Company A account."
       },
       {
         "question": "Was there a promise to pay by the debtor?",
         "reasoning": "The debtor did not make a direct promise to pay. He offered to provide contact details of the funding source.",
         "answer": false,
-        "transcript": "[00:01:34]  Actually the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh springer nature which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
+        "transcript": "[00:01:34]  Actually the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh Company A which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
       },
       {
         "question": "Did the debtor make any specific requirement to help them pay?",
         "reasoning": "No, the debtor didn't request anything specific to help with payment. He simply explained the situation and offered contact information for the funding parties.",
         "answer": false,
-        "transcript": "[00:01:34] Actually the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh springer nature which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
+        "transcript": "[00:01:34] Actually the thing is that when it was supposed to be published uh there there were two people who were funding my paper. So uh I have even though written them that there is a communication from the uh from this uh Company A which always mentions that I have not you know uh submitted the kind of fees that was supposed to be charged for this uh this paper."
       }
     ]
   },
@@ -259,7 +259,7 @@
         "question": "Was the debtor willing to pay?",
         "reasoning": "The debtor did not explicitly refuse to pay and cooperated by providing information and accepting the invoice was due.  The agent's explanation of the delay implied the debtor was expecting payment.",
         "answer": "Medium",
-        "transcript": "[00:00:38]-[00:01:50] Yes. This is Jordyn calling from Springer Nature and I'm looking for Luigi Kiss. I don't know, I think you have the wrong number. What is this in reference to? Because... Uh, this is regarding their open invoice and this is Springer Nature. Mhm. I think you have the right number, but my name is Cheryl Lucania and I work for Nucleus Global and I am working on getting payment, I think, for the invoice. Let me look up uh the invoice that I'm working on and make sure we're both working on the same thing."
+        "transcript": "[00:00:38]-[00:01:50] Yes. This is Jordyn calling from Company A and I'm looking for Luigi Kiss. I don't know, I think you have the wrong number. What is this in reference to? Because... Uh, this is regarding their open invoice and this is Company A. Mhm. I think you have the right number, but my name is Cheryl Lucania and I work for Nucleus Global and I am working on getting payment, I think, for the invoice. Let me look up uh the invoice that I'm working on and make sure we're both working on the same thing."
       },
       {
         "question": "Is the risk of the payment default high?",
@@ -271,13 +271,13 @@
         "question": "Did the agent reach the right point-of-contact?",
         "reasoning": "The initial confusion over the phone number suggests the agent may not have reached the correct contact initially. However, the conversation progressed with the correct person handling the invoice.",
         "answer": true,
-        "transcript": "[00:00:25]-[00:00:45] Hello? Hi. Hello? Hello? Yes. Can you hear me? Yes. This is Jordyn calling from Springer Nature and I'm looking for Luigi Kiss. I don't know, I think you have the wrong number. What is this in reference to? Because..."
+        "transcript": "[00:00:25]-[00:00:45] Hello? Hi. Hello? Hello? Yes. Can you hear me? Yes. This is Jordyn calling from Company A and I'm looking for Luigi Kiss. I don't know, I think you have the wrong number. What is this in reference to? Because..."
       },
       {
         "question": "Did the debtor accept that the invoice was due?",
         "reasoning": "The debtor didn't dispute the invoice's existence or validity. They asked for clarification on the payment status.",
         "answer": true,
-        "transcript": "[00:00:38]-[00:01:50] Yes. This is Jordyn calling from Springer Nature and I'm looking for Luigi Kiss. I don't know, I think you have the wrong number. What is this in reference to? Because... Uh, this is regarding their open invoice and this is Springer Nature. Mhm. I think you have the right number, but my name is Cheryl Lucania and I work for Nucleus Global and I am working on getting payment, I think, for the invoice."
+        "transcript": "[00:00:38]-[00:01:50] Yes. This is Jordyn calling from Company A and I'm looking for Luigi Kiss. I don't know, I think you have the wrong number. What is this in reference to? Because... Uh, this is regarding their open invoice and this is Company A. Mhm. I think you have the right number, but my name is Cheryl Lucania and I work for Nucleus Global and I am working on getting payment, I think, for the invoice."
       },
       {
         "question": "Was there a promise to pay by the debtor?",
